@@ -41,6 +41,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="FileIO\XMLReader.cs" />
+    <Compile Include="Packets\PacketReader.cs" />
+    <Compile Include="Packets\PacketWriter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

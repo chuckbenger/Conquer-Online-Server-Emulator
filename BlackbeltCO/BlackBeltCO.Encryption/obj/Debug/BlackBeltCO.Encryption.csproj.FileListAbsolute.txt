@@ -3,3 +3,8 @@ C:\Users\chuck\Dropbox\Dev items\BlackbeltCO\BlackBeltCO.Encryption\bin\Debug\Bl
 C:\Users\chuck\Dropbox\Dev items\BlackbeltCO\BlackBeltCO.Encryption\obj\Debug\ResolveAssemblyReference.cache
 C:\Users\chuck\Dropbox\Dev items\BlackbeltCO\BlackBeltCO.Encryption\obj\Debug\BlackBeltCO.Encryption.dll
 C:\Users\chuck\Dropbox\Dev items\BlackbeltCO\BlackBeltCO.Encryption\obj\Debug\BlackBeltCO.Encryption.pdb
+C:\Users\chuck\Conquer-Online-Server-Emulator\BlackbeltCO\BlackBeltCO.Encryption\bin\Debug\BlackBeltCO.Encryption.dll
+C:\Users\chuck\Conquer-Online-Server-Emulator\BlackbeltCO\BlackBeltCO.Encryption\bin\Debug\BlackBeltCO.Encryption.pdb
+C:\Users\chuck\Conquer-Online-Server-Emulator\BlackbeltCO\BlackBeltCO.Encryption\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\chuck\Conquer-Online-Server-Emulator\BlackbeltCO\BlackBeltCO.Encryption\obj\Debug\BlackBeltCO.Encryption.dll
+C:\Users\chuck\Conquer-Online-Server-Emulator\BlackbeltCO\BlackBeltCO.Encryption\obj\Debug\BlackBeltCO.Encryption.pdb

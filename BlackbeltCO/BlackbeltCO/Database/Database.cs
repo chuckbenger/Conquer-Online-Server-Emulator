@@ -21,9 +21,9 @@ namespace BlackBeltCO.Login
         /// <returns>Returns true if connection was succefll other false.</returns>
         public bool Connect(XMLReader _reader)
         {
-            string ip       = _reader["ip"];
-            string user     = _reader["user"];
-            string password = _reader["password"];
+            string ip       = _reader["database-ip"];
+            string user     = _reader["database-user"];
+            string password = _reader["database-password"];
             string database = _reader["database"];
 
             string connectionString;

@@ -8,7 +8,7 @@
     <ProjectGuid>{7E36DDCF-5816-4632-8004-DFD9FB92964C}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>BlackBeltCO.Socket</RootNamespace>
+    <RootNamespace>BlackBeltCO.COSocket</RootNamespace>
     <AssemblyName>BlackBeltCO.Socket</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
@@ -40,8 +40,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="COClientSocket.cs" />
     <Compile Include="ConsumerPool.cs" />
     <Compile Include="COServerSocket.cs" />
+    <Compile Include="IHandler.cs" />
+    <Compile Include="IWorkable.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
