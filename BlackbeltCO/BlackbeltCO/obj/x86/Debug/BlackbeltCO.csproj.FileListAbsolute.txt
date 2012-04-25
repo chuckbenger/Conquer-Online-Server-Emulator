@@ -1,0 +1,9 @@
+C:\Users\chuck\Dropbox\Dev items\BlackbeltCO\BlackbeltCO\bin\Debug\BlackbeltCO.exe
+C:\Users\chuck\Dropbox\Dev items\BlackbeltCO\BlackbeltCO\bin\Debug\BlackbeltCO.pdb
+C:\Users\chuck\Dropbox\Dev items\BlackbeltCO\BlackbeltCO\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\chuck\Dropbox\Dev items\BlackbeltCO\BlackbeltCO\obj\x86\Debug\BlackbeltCO.exe
+C:\Users\chuck\Dropbox\Dev items\BlackbeltCO\BlackbeltCO\obj\x86\Debug\BlackbeltCO.pdb
+C:\Users\chuck\Dropbox\Dev items\BlackbeltCO\BlackbeltCO\bin\Debug\BlackbeltCO.Engine.dll
+C:\Users\chuck\Dropbox\Dev items\BlackbeltCO\BlackbeltCO\bin\Debug\BlackbeltCO.Engine.pdb
+C:\Users\chuck\Dropbox\Dev items\BlackbeltCO\BlackbeltCO\bin\Debug\BlackBeltCO.Socket.dll
+C:\Users\chuck\Dropbox\Dev items\BlackbeltCO\BlackbeltCO\bin\Debug\BlackBeltCO.Socket.pdb

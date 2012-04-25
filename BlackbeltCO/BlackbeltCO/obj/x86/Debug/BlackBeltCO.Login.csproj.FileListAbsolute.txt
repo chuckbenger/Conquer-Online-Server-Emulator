@@ -1,0 +1,12 @@
+C:\Users\chuck\Dropbox\Dev items\BlackbeltCO\BlackbeltCO\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\chuck\Dropbox\Dev items\BlackbeltCO\BlackbeltCO\obj\x86\Debug\BlackbeltCO.exe
+C:\Users\chuck\Dropbox\Dev items\BlackbeltCO\BlackbeltCO\obj\x86\Debug\BlackbeltCO.pdb
+C:\Users\chuck\Dropbox\Dev items\BlackbeltCO\BlackbeltCO\bin\Debug\BlackbeltCO.exe
+C:\Users\chuck\Dropbox\Dev items\BlackbeltCO\BlackbeltCO\bin\Debug\BlackbeltCO.pdb
+C:\Users\chuck\Dropbox\Dev items\BlackbeltCO\BlackbeltCO\bin\Debug\BlackBeltCO.Core.dll
+C:\Users\chuck\Dropbox\Dev items\BlackbeltCO\BlackbeltCO\bin\Debug\BlackBeltCO.Encryption.dll
+C:\Users\chuck\Dropbox\Dev items\BlackbeltCO\BlackbeltCO\bin\Debug\BlackBeltCO.Socket.dll
+C:\Users\chuck\Dropbox\Dev items\BlackbeltCO\BlackbeltCO\bin\Debug\msvcrt.dll
+C:\Users\chuck\Dropbox\Dev items\BlackbeltCO\BlackbeltCO\bin\Debug\BlackBeltCO.Core.pdb
+C:\Users\chuck\Dropbox\Dev items\BlackbeltCO\BlackbeltCO\bin\Debug\BlackBeltCO.Encryption.pdb
+C:\Users\chuck\Dropbox\Dev items\BlackbeltCO\BlackbeltCO\bin\Debug\BlackBeltCO.Socket.pdb

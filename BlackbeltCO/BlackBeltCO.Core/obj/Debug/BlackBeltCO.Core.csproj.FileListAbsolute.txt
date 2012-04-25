@@ -1,0 +1,5 @@
+C:\Users\chuck\Dropbox\Dev items\BlackbeltCO\BlackBeltCO.Core\bin\Debug\BlackBeltCO.Core.dll
+C:\Users\chuck\Dropbox\Dev items\BlackbeltCO\BlackBeltCO.Core\bin\Debug\BlackBeltCO.Core.pdb
+C:\Users\chuck\Dropbox\Dev items\BlackbeltCO\BlackBeltCO.Core\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\chuck\Dropbox\Dev items\BlackbeltCO\BlackBeltCO.Core\obj\Debug\BlackBeltCO.Core.dll
+C:\Users\chuck\Dropbox\Dev items\BlackbeltCO\BlackBeltCO.Core\obj\Debug\BlackBeltCO.Core.pdb
