@@ -53,8 +53,6 @@ namespace BlackBeltCO.COSocket
             //Indicate to remove that client from the dictionary
             foreach (IWorkable client in tasks.Keys)
                 addTask(client, null);
-                      
-            foreach (Thread worker in workers) worker.Join();
         }
 
         /// <summary>
