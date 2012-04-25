@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using BlackBeltCO.Core;
 using BlackBeltCO.COSocket;
-
+using System.Net.Sockets;
 
 namespace BlackBeltCO.Login
 {
@@ -13,6 +13,7 @@ namespace BlackBeltCO.Login
 
         private const string _NAME      = "BlackBeltCO "; //Name of the server for console output
         private const string _DB_CONFIG = "config/database.xml";  //Holds the database configuration
+        private Database _database;
 
         /// <summary>
         /// Outputs the specified text to the console
@@ -31,10 +32,29 @@ namespace BlackBeltCO.Login
             XMLReader configReader = new XMLReader();
             if (!configReader.read(_DB_CONFIG))
             {
-                Kernel.print("Couldn't read " + _DB_CONFIG);
+                print("Couldn't read " + _DB_CONFIG);
                 Console.ReadKey();
                 Environment.Exit(-1);
             }
+
+            _database = new Database();
+            if (!_database.Connect(configReader))
+            {
+                Console.ReadKey();
+                Environment.Exit(-1);
+            }
+
+
+        }
+
+        /// <summary>
+        /// Accepts a client connection. This method is called from a
+        /// COServerSocket instance delegate
+        /// </summary>
+        /// <param name="client">Clients socket connection</param>
+        private void acceptClient(Socket client)
+        {
+
         }
 
         /// <summary>
