@@ -1,9 +1,0 @@
-<?xml version='1.0'?>
-<config>
-  <database-ip>192.168.1.100</database-ip>
-  <database-user>root</database-user>
-  <database-password>1234</database-password>
-  <database>BlackBeltCO</database>
-
-  <login-port>9960</login-port>
-</config>
