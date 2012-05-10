@@ -1,0 +1,345 @@
+May 09, 2012 5:40:12 PM conquerboxauth.MyLogger initLog
+INFO: Log for Wed May 09 17:40:12 CDT 2012
+May 09, 2012 5:40:12 PM conquerboxauth.MyLogger appendLog
+INFO: Auth was bound to port 9958
+May 09, 2012 8:09:47 PM conquerboxauth.MyLogger initLog
+INFO: Log for Wed May 09 20:09:47 CDT 2012
+May 09, 2012 8:09:47 PM conquerboxauth.MyLogger appendLog
+INFO: Auth was bound to port 9958
+May 09, 2012 8:19:49 PM conquerboxauth.MyLogger initLog
+INFO: Log for Wed May 09 20:19:49 CDT 2012
+May 09, 2012 8:19:50 PM conquerboxauth.MyLogger appendLog
+INFO: Auth was bound to port 9958
+May 09, 2012 9:18:14 PM conquerboxauth.MyLogger initLog
+INFO: Log for Wed May 09 21:18:14 CDT 2012
+May 09, 2012 9:18:14 PM conquerboxauth.MyLogger appendLog
+INFO: Auth was bound to port 9958
+May 09, 2012 9:18:22 PM conquerboxauth.MyLogger appendLog
+SEVERE: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown database 'jco'
+May 09, 2012 9:18:22 PM conquerboxauth.MyLogger appendLog
+SEVERE: Couldn't connect to the database, shutting down.
+May 09, 2012 9:18:45 PM conquerboxauth.MyLogger initLog
+INFO: Log for Wed May 09 21:18:45 CDT 2012
+May 09, 2012 9:18:45 PM conquerboxauth.MyLogger appendLog
+INFO: Auth was bound to port 9958
+May 09, 2012 9:18:48 PM conquerboxauth.MyLogger appendLog
+SEVERE: [id: 0x73aeff7d, /127.0.0.1:1933 => /127.0.0.1:9958] EXCEPTION: java.lang.IllegalArgumentException: unsupported message type: class [B
+May 09, 2012 9:18:48 PM conquerboxauth.MyLogger appendLog
+INFO: Login attempt from Fang => *���!\�3���� Server => �Test
+May 09, 2012 9:19:53 PM conquerboxauth.MyLogger initLog
+INFO: Log for Wed May 09 21:19:53 CDT 2012
+May 09, 2012 9:19:53 PM conquerboxauth.MyLogger appendLog
+INFO: Auth was bound to port 9958
+May 09, 2012 9:20:00 PM conquerboxauth.MyLogger appendLog
+SEVERE: [id: 0x6607a2e0, /127.0.0.1:1939 => /127.0.0.1:9958] EXCEPTION: java.lang.IllegalArgumentException: unsupported message type: class [B
+May 09, 2012 9:20:00 PM conquerboxauth.MyLogger appendLog
+INFO: Login attempt from Fang => *���!\�3���� Server => �Test
+May 09, 2012 9:20:15 PM conquerboxauth.MyLogger initLog
+INFO: Log for Wed May 09 21:20:14 CDT 2012
+May 09, 2012 9:20:15 PM conquerboxauth.MyLogger appendLog
+INFO: Auth was bound to port 9958
+May 09, 2012 9:20:56 PM conquerboxauth.MyLogger appendLog
+SEVERE: [id: 0x23e7872e, /127.0.0.1:1945 => /127.0.0.1:9958] EXCEPTION: java.lang.IllegalArgumentException: unsupported message type: class [B
+May 09, 2012 9:21:00 PM conquerboxauth.MyLogger appendLog
+INFO: Login attempt from Fang => *���!\�3���� Server => �Test
+May 09, 2012 9:24:12 PM conquerboxauth.MyLogger initLog
+INFO: Log for Wed May 09 21:24:12 CDT 2012
+May 09, 2012 9:24:12 PM conquerboxauth.MyLogger appendLog
+INFO: Auth was bound to port 9958
+May 09, 2012 9:24:16 PM conquerboxauth.MyLogger appendLog
+SEVERE: [id: 0x539d2bed, /127.0.0.1:1967 => /127.0.0.1:9958] EXCEPTION: java.lang.IllegalArgumentException: unsupported message type: class [B
+May 09, 2012 9:24:16 PM conquerboxauth.MyLogger appendLog
+INFO: Login attempt from Fang => *���!\�3���� Server => �Test
+May 09, 2012 9:29:18 PM conquerboxauth.MyLogger initLog
+INFO: Log for Wed May 09 21:29:18 CDT 2012
+May 09, 2012 9:29:18 PM conquerboxauth.MyLogger appendLog
+INFO: Auth was bound to port 9958
+May 09, 2012 9:29:21 PM conquerboxauth.MyLogger appendLog
+SEVERE: [id: 0x7cc2ccfb, /127.0.0.1:2020 => /127.0.0.1:9958] EXCEPTION: java.lang.IllegalArgumentException: unsupported message type: class [B
+May 09, 2012 9:29:21 PM conquerboxauth.MyLogger appendLog
+INFO: Login attempt from Fang => *���!\�3���� Server => �Test
+May 09, 2012 9:31:25 PM conquerboxauth.MyLogger initLog
+INFO: Log for Wed May 09 21:31:25 CDT 2012
+May 09, 2012 9:31:25 PM conquerboxauth.MyLogger appendLog
+INFO: Auth was bound to port 9958
+May 09, 2012 9:31:28 PM conquerboxauth.MyLogger appendLog
+SEVERE: unsupported message type: class [B
+May 09, 2012 9:31:28 PM conquerboxauth.MyLogger appendLog
+INFO: Login attempt from Fang => *���!\�3���� Server => �Test
+May 09, 2012 9:32:07 PM conquerboxauth.MyLogger initLog
+INFO: Log for Wed May 09 21:32:07 CDT 2012
+May 09, 2012 9:32:07 PM conquerboxauth.MyLogger appendLog
+INFO: Auth was bound to port 9958
+May 09, 2012 9:32:10 PM conquerboxauth.MyLogger appendLog
+SEVERE: [Ljava.lang.StackTraceElement;@72a68e82
+May 09, 2012 9:32:10 PM conquerboxauth.MyLogger appendLog
+INFO: Login attempt from Fang => *���!\�3���� Server => �Test
+May 09, 2012 9:35:15 PM conquerboxauth.MyLogger initLog
+INFO: Log for Wed May 09 21:35:15 CDT 2012
+May 09, 2012 9:35:15 PM conquerboxauth.MyLogger appendLog
+INFO: Auth was bound to port 9958
+May 09, 2012 9:35:18 PM conquerboxauth.MyLogger appendLog
+SEVERE: org.jboss.netty.channel.socket.nio.SocketSendBufferPool.acquire(SocketSendBufferPool.java:52)org.jboss.netty.channel.socket.nio.AbstractNioWorker.write0(AbstractNioWorker.java:467)org.jboss.netty.channel.socket.nio.AbstractNioWorker.writeFromUserCode(AbstractNioWorker.java:426)org.jboss.netty.channel.socket.nio.NioServerSocketPipelineSink.handleAcceptedSocket(NioServerSocketPipelineSink.java:127)org.jboss.netty.channel.socket.nio.NioServerSocketPipelineSink.eventSunk(NioServerSocketPipelineSink.java:66)org.jboss.netty.channel.Channels.write(Channels.java:712)org.jboss.netty.channel.Channels.write(Channels.java:679)org.jboss.netty.channel.AbstractChannel.write(AbstractChannel.java:245)conquerboxauth.Server.AuthHandler.handle(AuthHandler.java:119)conquerboxauth.Server.AuthHandler.messageReceived(AuthHandler.java:69)org.jboss.netty.channel.Channels.fireMessageReceived(Channels.java:296)org.jboss.netty.handler.codec.frame.FrameDecoder.unfoldAndFireMessageReceived(FrameDecoder.java:352)org.jboss.netty.handler.codec.frame.FrameDecoder.callDecode(FrameDecoder.java:334)org.jboss.netty.handler.codec.frame.FrameDecoder.messageReceived(FrameDecoder.java:207)org.jboss.netty.channel.Channels.fireMessageReceived(Channels.java:268)org.jboss.netty.channel.Channels.fireMessageReceived(Channels.java:255)org.jboss.netty.channel.socket.nio.NioWorker.read(NioWorker.java:94)org.jboss.netty.channel.socket.nio.AbstractNioWorker.processSelectedKeys(AbstractNioWorker.java:372)org.jboss.netty.channel.socket.nio.AbstractNioWorker.run(AbstractNioWorker.java:246)org.jboss.netty.channel.socket.nio.NioWorker.run(NioWorker.java:38)java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)java.lang.Thread.run(Thread.java:722)
+May 09, 2012 9:35:18 PM conquerboxauth.MyLogger appendLog
+INFO: Login attempt from Fang => *���!\�3���� Server => �Test
+May 09, 2012 9:35:44 PM conquerboxauth.MyLogger initLog
+INFO: Log for Wed May 09 21:35:44 CDT 2012
+May 09, 2012 9:35:44 PM conquerboxauth.MyLogger appendLog
+INFO: Auth was bound to port 9958
+May 09, 2012 9:35:47 PM conquerboxauth.MyLogger appendLog
+SEVERE: org.jboss.netty.channel.socket.nio.SocketSendBufferPool.acquire(SocketSendBufferPool.java:52)
+org.jboss.netty.channel.socket.nio.AbstractNioWorker.write0(AbstractNioWorker.java:467)
+org.jboss.netty.channel.socket.nio.AbstractNioWorker.writeFromUserCode(AbstractNioWorker.java:426)
+org.jboss.netty.channel.socket.nio.NioServerSocketPipelineSink.handleAcceptedSocket(NioServerSocketPipelineSink.java:127)
+org.jboss.netty.channel.socket.nio.NioServerSocketPipelineSink.eventSunk(NioServerSocketPipelineSink.java:66)
+org.jboss.netty.channel.Channels.write(Channels.java:712)
+org.jboss.netty.channel.Channels.write(Channels.java:679)
+org.jboss.netty.channel.AbstractChannel.write(AbstractChannel.java:245)
+conquerboxauth.Server.AuthHandler.handle(AuthHandler.java:119)
+conquerboxauth.Server.AuthHandler.messageReceived(AuthHandler.java:69)
+org.jboss.netty.channel.Channels.fireMessageReceived(Channels.java:296)
+org.jboss.netty.handler.codec.frame.FrameDecoder.unfoldAndFireMessageReceived(FrameDecoder.java:352)
+org.jboss.netty.handler.codec.frame.FrameDecoder.callDecode(FrameDecoder.java:334)
+org.jboss.netty.handler.codec.frame.FrameDecoder.messageReceived(FrameDecoder.java:207)
+org.jboss.netty.channel.Channels.fireMessageReceived(Channels.java:268)
+org.jboss.netty.channel.Channels.fireMessageReceived(Channels.java:255)
+org.jboss.netty.channel.socket.nio.NioWorker.read(NioWorker.java:94)
+org.jboss.netty.channel.socket.nio.AbstractNioWorker.processSelectedKeys(AbstractNioWorker.java:372)
+org.jboss.netty.channel.socket.nio.AbstractNioWorker.run(AbstractNioWorker.java:246)
+org.jboss.netty.channel.socket.nio.NioWorker.run(NioWorker.java:38)
+java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+java.lang.Thread.run(Thread.java:722)
+
+May 09, 2012 9:35:47 PM conquerboxauth.MyLogger appendLog
+INFO: Login attempt from Fang => *���!\�3���� Server => �Test
+May 09, 2012 9:39:07 PM conquerboxauth.MyLogger initLog
+INFO: Log for Wed May 09 21:39:07 CDT 2012
+May 09, 2012 9:39:07 PM conquerboxauth.MyLogger appendLog
+INFO: Auth was bound to port 9958
+May 09, 2012 9:39:10 PM conquerboxauth.MyLogger appendLog
+SEVERE: [id: 0x7cc2ccfb, /127.0.0.1:2168 => /127.0.0.1:9958] EXCEPTION: java.lang.IllegalArgumentException: unsupported message type: class [B
+org.jboss.netty.channel.socket.nio.SocketSendBufferPool.acquire(SocketSendBufferPool.java:52)
+org.jboss.netty.channel.socket.nio.AbstractNioWorker.write0(AbstractNioWorker.java:467)
+org.jboss.netty.channel.socket.nio.AbstractNioWorker.writeFromUserCode(AbstractNioWorker.java:426)
+org.jboss.netty.channel.socket.nio.NioServerSocketPipelineSink.handleAcceptedSocket(NioServerSocketPipelineSink.java:127)
+org.jboss.netty.channel.socket.nio.NioServerSocketPipelineSink.eventSunk(NioServerSocketPipelineSink.java:66)
+org.jboss.netty.channel.Channels.write(Channels.java:712)
+org.jboss.netty.channel.Channels.write(Channels.java:679)
+org.jboss.netty.channel.AbstractChannel.write(AbstractChannel.java:245)
+conquerboxauth.Server.AuthHandler.handle(AuthHandler.java:119)
+conquerboxauth.Server.AuthHandler.messageReceived(AuthHandler.java:69)
+org.jboss.netty.channel.Channels.fireMessageReceived(Channels.java:296)
+org.jboss.netty.handler.codec.frame.FrameDecoder.unfoldAndFireMessageReceived(FrameDecoder.java:352)
+org.jboss.netty.handler.codec.frame.FrameDecoder.callDecode(FrameDecoder.java:334)
+org.jboss.netty.handler.codec.frame.FrameDecoder.messageReceived(FrameDecoder.java:207)
+org.jboss.netty.channel.Channels.fireMessageReceived(Channels.java:268)
+org.jboss.netty.channel.Channels.fireMessageReceived(Channels.java:255)
+org.jboss.netty.channel.socket.nio.NioWorker.read(NioWorker.java:94)
+org.jboss.netty.channel.socket.nio.AbstractNioWorker.processSelectedKeys(AbstractNioWorker.java:372)
+org.jboss.netty.channel.socket.nio.AbstractNioWorker.run(AbstractNioWorker.java:246)
+org.jboss.netty.channel.socket.nio.NioWorker.run(NioWorker.java:38)
+java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+java.lang.Thread.run(Thread.java:722)
+
+May 09, 2012 9:39:10 PM conquerboxauth.MyLogger appendLog
+INFO: Login attempt from Fang => *���!\�3���� Server => �Test
+May 09, 2012 9:41:50 PM conquerboxauth.MyLogger initLog
+INFO: Log for Wed May 09 21:41:50 CDT 2012
+May 09, 2012 9:41:50 PM conquerboxauth.MyLogger appendLog
+INFO: Auth was bound to port 9958
+May 09, 2012 9:41:53 PM conquerboxauth.MyLogger appendLog
+INFO: Login attempt from Fang => *���!\�3���� Server => �Test
+May 09, 2012 9:41:53 PM conquerboxauth.MyLogger appendLog
+INFO: Unkown packet: ID = 1052
+May 09, 2012 9:43:54 PM conquerboxauth.MyLogger initLog
+INFO: Log for Wed May 09 21:43:54 CDT 2012
+May 09, 2012 9:43:54 PM conquerboxauth.MyLogger appendLog
+INFO: Auth was bound to port 9958
+May 09, 2012 9:43:57 PM conquerboxauth.MyLogger appendLog
+INFO: Login attempt from Fang => *���!\�3���� Server => �Test
+May 09, 2012 9:44:33 PM conquerboxauth.MyLogger initLog
+INFO: Log for Wed May 09 21:44:33 CDT 2012
+May 09, 2012 9:44:33 PM conquerboxauth.MyLogger appendLog
+INFO: Auth was bound to port 9958
+May 09, 2012 9:44:36 PM conquerboxauth.MyLogger appendLog
+INFO: Login attempt from Fang => *���!\�3���� Server => �Test
+May 09, 2012 9:45:07 PM conquerboxauth.MyLogger initLog
+INFO: Log for Wed May 09 21:45:07 CDT 2012
+May 09, 2012 9:45:07 PM conquerboxauth.MyLogger appendLog
+INFO: Auth was bound to port 9958
+May 09, 2012 9:45:10 PM conquerboxauth.MyLogger appendLog
+INFO: Login attempt from Fang => *���!\�3���� Server => �Test
+May 09, 2012 9:45:24 PM conquerboxauth.MyLogger appendLog
+INFO: Login attempt from Fang => *���!\�3���� Server => �Test
+May 09, 2012 9:45:26 PM conquerboxauth.MyLogger appendLog
+INFO: Login attempt from Fang => *���!\�3���� Server => �Test
+May 09, 2012 9:45:28 PM conquerboxauth.MyLogger appendLog
+INFO: Login attempt from Fang => *���!\�3���� Server => �Test
+May 09, 2012 9:46:08 PM conquerboxauth.MyLogger initLog
+INFO: Log for Wed May 09 21:46:07 CDT 2012
+May 09, 2012 9:46:08 PM conquerboxauth.MyLogger appendLog
+INFO: Auth was bound to port 9958
+May 09, 2012 9:46:10 PM conquerboxauth.MyLogger appendLog
+INFO: Login attempt from Fang => *���!\�3���� Server => �Test
+May 09, 2012 9:48:30 PM conquerboxauth.MyLogger initLog
+INFO: Log for Wed May 09 21:48:30 CDT 2012
+May 09, 2012 9:48:31 PM conquerboxauth.MyLogger appendLog
+INFO: Auth was bound to port 9958
+May 09, 2012 9:48:33 PM conquerboxauth.MyLogger appendLog
+INFO: Login attempt from Fang => *���!\�3���� Server => �Test
+May 09, 2012 9:49:53 PM conquerboxauth.MyLogger initLog
+INFO: Log for Wed May 09 21:49:53 CDT 2012
+May 09, 2012 9:49:53 PM conquerboxauth.MyLogger appendLog
+INFO: Auth was bound to port 9958
+May 09, 2012 9:49:59 PM conquerboxauth.MyLogger appendLog
+INFO: Login attempt from Fang => *���!\�3���� Server => �Test
+May 09, 2012 9:50:38 PM conquerboxauth.MyLogger initLog
+INFO: Log for Wed May 09 21:50:38 CDT 2012
+May 09, 2012 9:50:38 PM conquerboxauth.MyLogger appendLog
+INFO: Auth was bound to port 9958
+May 09, 2012 9:53:19 PM conquerboxauth.MyLogger initLog
+INFO: Log for Wed May 09 21:53:19 CDT 2012
+May 09, 2012 9:53:20 PM conquerboxauth.MyLogger appendLog
+INFO: Auth was bound to port 9958
+May 09, 2012 9:53:22 PM conquerboxauth.MyLogger appendLog
+INFO: Login attempt from Fang => *���!\�3���� Server => �Test
+May 09, 2012 9:53:37 PM conquerboxauth.MyLogger initLog
+INFO: Log for Wed May 09 21:53:37 CDT 2012
+May 09, 2012 9:53:37 PM conquerboxauth.MyLogger appendLog
+INFO: Auth was bound to port 9958
+May 09, 2012 9:53:41 PM conquerboxauth.MyLogger appendLog
+INFO: Login attempt from Fang => *���!\�3���� Server => �Test
+May 09, 2012 9:56:25 PM conquerboxauth.MyLogger initLog
+INFO: Log for Wed May 09 21:56:25 CDT 2012
+May 09, 2012 9:56:25 PM conquerboxauth.MyLogger appendLog
+INFO: Auth was bound to port 9958
+May 09, 2012 9:56:28 PM conquerboxauth.MyLogger appendLog
+INFO: Login attempt from Fang => *���!\�3���� Server => �Test
+May 09, 2012 9:56:40 PM conquerboxauth.MyLogger initLog
+INFO: Log for Wed May 09 21:56:40 CDT 2012
+May 09, 2012 9:56:40 PM conquerboxauth.MyLogger appendLog
+INFO: Auth was bound to port 9958
+May 09, 2012 9:56:43 PM conquerboxauth.MyLogger appendLog
+INFO: Login attempt from Fang => *���!\�3���� Server => �Test
+May 09, 2012 9:56:43 PM conquerboxauth.MyLogger appendLog
+INFO: Unkown packet: ID = 1052
+May 09, 2012 10:02:39 PM conquerboxauth.MyLogger initLog
+INFO: Log for Wed May 09 22:02:39 CDT 2012
+May 09, 2012 10:02:39 PM conquerboxauth.MyLogger appendLog
+INFO: Auth was bound to port 9958
+May 09, 2012 10:02:46 PM conquerboxauth.MyLogger appendLog
+INFO: Login attempt from Fang => �;� А[�-�|f`� Server => �Test
+May 09, 2012 10:02:46 PM conquerboxauth.MyLogger appendLog
+INFO: Unkown packet: ID = 1052
+May 09, 2012 10:03:12 PM conquerboxauth.MyLogger initLog
+INFO: Log for Wed May 09 22:03:12 CDT 2012
+May 09, 2012 10:03:12 PM conquerboxauth.MyLogger appendLog
+INFO: Auth was bound to port 9958
+May 09, 2012 10:03:15 PM conquerboxauth.MyLogger appendLog
+INFO: Login attempt from Fang => �;� А[�-�|f`� Server => �Test
+May 09, 2012 10:03:15 PM conquerboxauth.MyLogger appendLog
+INFO: Unkown packet: ID = 1052
+May 09, 2012 10:03:56 PM conquerboxauth.MyLogger initLog
+INFO: Log for Wed May 09 22:03:56 CDT 2012
+May 09, 2012 10:03:56 PM conquerboxauth.MyLogger appendLog
+INFO: Auth was bound to port 9958
+May 09, 2012 10:04:43 PM conquerboxauth.MyLogger initLog
+INFO: Log for Wed May 09 22:04:43 CDT 2012
+May 09, 2012 10:04:43 PM conquerboxauth.MyLogger appendLog
+INFO: Auth was bound to port 9958
+May 09, 2012 10:04:52 PM conquerboxauth.MyLogger appendLog
+INFO: Login attempt from Fang => �;� А[�-�|f`� Server => �Test
+May 09, 2012 10:05:03 PM conquerboxauth.MyLogger initLog
+INFO: Log for Wed May 09 22:05:03 CDT 2012
+May 09, 2012 10:05:03 PM conquerboxauth.MyLogger appendLog
+INFO: Auth was bound to port 9958
+May 09, 2012 10:05:07 PM conquerboxauth.MyLogger appendLog
+INFO: Login attempt from Fang => �;� А[�-�|f`� Server => �Test
+May 09, 2012 10:05:56 PM conquerboxauth.MyLogger initLog
+INFO: Log for Wed May 09 22:05:56 CDT 2012
+May 09, 2012 10:05:56 PM conquerboxauth.MyLogger appendLog
+INFO: Auth was bound to port 9958
+May 09, 2012 10:05:59 PM conquerboxauth.MyLogger appendLog
+INFO: Login attempt from Fang => �;� А[�-�|f`� Server => �Test
+May 09, 2012 10:05:59 PM conquerboxauth.MyLogger appendLog
+INFO: Unkown packet: ID = 1052
+May 09, 2012 10:06:28 PM conquerboxauth.MyLogger initLog
+INFO: Log for Wed May 09 22:06:28 CDT 2012
+May 09, 2012 10:06:28 PM conquerboxauth.MyLogger appendLog
+INFO: Auth was bound to port 9958
+May 09, 2012 10:06:31 PM conquerboxauth.MyLogger appendLog
+INFO: Login attempt from Fang => �;� А[�-�|f`� Server => �Test
+May 09, 2012 10:06:31 PM conquerboxauth.MyLogger appendLog
+INFO: Unkown packet: ID = 1052       res.dat         
+May 09, 2012 10:09:09 PM conquerboxauth.MyLogger initLog
+INFO: Log for Wed May 09 22:09:09 CDT 2012
+May 09, 2012 10:09:09 PM conquerboxauth.MyLogger appendLog
+INFO: Auth was bound to port 9958
+May 09, 2012 10:09:12 PM conquerboxauth.MyLogger appendLog
+INFO: Login attempt from Fang => �;� А[�-�|f`� Server => �Test
+May 09, 2012 10:09:38 PM conquerboxauth.MyLogger initLog
+INFO: Log for Wed May 09 22:09:38 CDT 2012
+May 09, 2012 10:09:38 PM conquerboxauth.MyLogger appendLog
+INFO: Auth was bound to port 9958
+May 09, 2012 10:09:41 PM conquerboxauth.MyLogger appendLog
+INFO: Login attempt from Fang => �;� А[�-�|f`� Server => �Test
+May 09, 2012 10:16:27 PM conquerboxauth.MyLogger initLog
+INFO: Log for Wed May 09 22:16:27 CDT 2012
+May 09, 2012 10:16:27 PM conquerboxauth.MyLogger appendLog
+INFO: Auth was bound to port 9958
+May 09, 2012 10:16:30 PM conquerboxauth.MyLogger appendLog
+INFO: Login attempt from Fang => �;� А[�-�|f`� Server => �Test
+May 09, 2012 10:18:30 PM conquerboxauth.MyLogger initLog
+INFO: Log for Wed May 09 22:18:30 CDT 2012
+May 09, 2012 10:18:30 PM conquerboxauth.MyLogger appendLog
+INFO: Auth was bound to port 9958
+May 09, 2012 10:18:32 PM conquerboxauth.MyLogger appendLog
+INFO: Login attempt from Fang => �;� А[�-�|f`� Server => �Test
+May 09, 2012 10:18:55 PM conquerboxauth.MyLogger initLog
+INFO: Log for Wed May 09 22:18:54 CDT 2012
+May 09, 2012 10:18:55 PM conquerboxauth.MyLogger appendLog
+INFO: Auth was bound to port 9958
+May 09, 2012 10:20:16 PM conquerboxauth.MyLogger initLog
+INFO: Log for Wed May 09 22:20:15 CDT 2012
+May 09, 2012 10:20:16 PM conquerboxauth.MyLogger appendLog
+INFO: Auth was bound to port 9958
+May 09, 2012 10:20:24 PM conquerboxauth.MyLogger appendLog
+INFO: Login attempt from Fang => �;� А[�-�|f`� Server => �Test
+May 09, 2012 10:21:16 PM conquerboxauth.MyLogger appendLog
+INFO: Login attempt from Fang => �;� А[�-�|f`� Server => �Test
+May 09, 2012 10:21:19 PM conquerboxauth.MyLogger appendLog
+INFO: Login attempt from Fang => �;� А[�-�|f`� Server => �Test
+May 09, 2012 10:21:29 PM conquerboxauth.MyLogger initLog
+INFO: Log for Wed May 09 22:21:28 CDT 2012
+May 09, 2012 10:21:29 PM conquerboxauth.MyLogger appendLog
+INFO: Auth was bound to port 9958
+May 09, 2012 10:21:32 PM conquerboxauth.MyLogger appendLog
+INFO: Login attempt from Fang => �;� А[�-�|f`� Server => �Test
+May 09, 2012 10:21:58 PM conquerboxauth.MyLogger initLog
+INFO: Log for Wed May 09 22:21:58 CDT 2012
+May 09, 2012 10:21:58 PM conquerboxauth.MyLogger appendLog
+INFO: Auth was bound to port 9958
+May 09, 2012 10:22:01 PM conquerboxauth.MyLogger appendLog
+INFO: Login attempt from Fang => �;� А[�-�|f`� Server => �Test
+May 09, 2012 10:22:06 PM conquerboxauth.MyLogger appendLog
+INFO: Login attempt from Fang => �;� А[�-�|f`� Server => �Test
+May 09, 2012 10:22:09 PM conquerboxauth.MyLogger appendLog
+INFO: Login attempt from Fang => �;� А[�-�|f`� Server => �Test
+May 09, 2012 10:22:11 PM conquerboxauth.MyLogger appendLog
+INFO: Login attempt from Fang => �;� А[�-�|f`� Server => �Test
+May 09, 2012 10:22:34 PM conquerboxauth.MyLogger appendLog
+INFO: Login attempt from Fang => �;� А[�-�|f`� Server => �Test
+May 09, 2012 10:22:39 PM conquerboxauth.MyLogger appendLog
+INFO: Login attempt from Fang => �;� А[�-�|f`� Server => �Test
+May 09, 2012 10:22:43 PM conquerboxauth.MyLogger appendLog
+INFO: Login attempt from Fang => �;� А[�-�|f`� Server => �Test
+May 09, 2012 10:22:46 PM conquerboxauth.MyLogger appendLog
+INFO: Login attempt from Fang => �;� А[�-�|f`� Server => �Test
+May 09, 2012 10:22:49 PM conquerboxauth.MyLogger appendLog
+INFO: Login attempt from Fang => �;� А[�-�|f`� Server => �Test
+May 09, 2012 10:22:52 PM conquerboxauth.MyLogger appendLog
+INFO: Login attempt from Fang => �;� А[�-�|f`� Server => �Test
+May 09, 2012 10:22:54 PM conquerboxauth.MyLogger appendLog
+INFO: Login attempt from Fang => �;� А[�-�|f`� Server => �Test
