@@ -23,5 +23,6 @@ package conquerboxgame.net;
  */
 public class ICallback {
     
-    public void 
+    //comment
+    
 }
