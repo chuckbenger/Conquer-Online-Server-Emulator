@@ -15,7 +15,7 @@
  * the License.
  * ***************************************************************************
  */
-package conquerboxgame;
+package conquerboxgame.core;
 
 /**
  * Entity provides a base class that represents attributes that all
@@ -30,8 +30,15 @@ public class Entity
     protected int    y;
     protected int    prevX;
     protected int    prevY;
+    protected long   model;
+
+   
 
    // <editor-fold defaultstate="collapsed" desc="Getters">
+     public long getModel() {
+        return model;
+    }
+     
     public int getHealth() {
         return health;
     }
@@ -58,6 +65,12 @@ public class Entity
    // </editor-fold>
 
    // <editor-fold defaultstate="collapsed" desc="Setters">
+
+    public void setModel(long model) {
+        this.model = model;
+    }
+    
+    
     public void setHealth(int health) {
         this.health = health;
     }
@@ -76,5 +89,6 @@ public class Entity
         this.y = y;
     }
     // </editor-fold>
+    
     
 }

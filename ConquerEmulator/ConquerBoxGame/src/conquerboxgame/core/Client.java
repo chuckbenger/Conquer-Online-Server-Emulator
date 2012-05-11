@@ -15,7 +15,9 @@
  * the License.
  * ***************************************************************************
  */
-package conquerboxgame;
+package conquerboxgame.core;
+
+import conquerboxgame.crypto.Cryptographer;
 
 /**
  *
@@ -32,12 +34,28 @@ public class Client extends Entity
     private int    statPoints;
     private int    magic;
     private int    pkPoints;
+    private int    hair;
     private short  level;
     private short  playerClass;
     private short  reborn;
     private String name;
+    
+    private Cryptographer crypt;
+    
+    /**
+     * Creates a new client object
+     */
+    public Client()
+    {
+        crypt = new Cryptographer();
+    }
 
     // <editor-fold defaultstate="collapsed" desc="Getters">
+
+    public int getHair() {
+        return hair;
+    }
+    
     public int getDexterity() {
         return dexterity;
     }
@@ -92,6 +110,11 @@ public class Client extends Entity
     // </editor-fold>
 
     // <editor-fold defaultstate="collapsed" desc="Setters">
+
+    public void setHair(int hair) {
+        this.hair = hair;
+    }
+        
     public void setDexterity(int dexterity) {
         this.dexterity = dexterity;
     }
@@ -144,6 +167,5 @@ public class Client extends Entity
         this.vitality = vitality;
     }
     // </editor-fold>
-    
-    
+      
 }

@@ -15,7 +15,9 @@
  * the License.
  * ***************************************************************************
  */
-package conquerboxgame.net;
+package conquerboxgame.core;
+
+import conquerboxgame.net.ServerDataEvent;
 
 /**
  * IHandler is used to enable worker threads to call the class

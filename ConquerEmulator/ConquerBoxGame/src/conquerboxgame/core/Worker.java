@@ -15,9 +15,10 @@
  * the License.
  * ***************************************************************************
  */
-package conquerboxgame.net;
+package conquerboxgame.core;
 
 import conquerboxgame.MyLogger;
+import conquerboxgame.net.ServerDataEvent;
 import java.util.HashMap;
 import java.util.Queue;
 import java.util.concurrent.ConcurrentLinkedDeque;
