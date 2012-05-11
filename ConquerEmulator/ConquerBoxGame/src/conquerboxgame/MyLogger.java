@@ -1,13 +1,13 @@
-package conquerboxauth;
+package conquerboxgame;
 
+import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.logging.FileHandler;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import java.util.Date;
 import java.util.logging.SimpleFormatter;
-import java.io.File;
 
 /**
  * **********************************************************************
@@ -50,7 +50,7 @@ public class MyLogger
 
             Date now = new Date();
 
-            String path = logDir.getAbsolutePath() + "\\Auth_" + new SimpleDateFormat("yyyy_MMM_dd").format(now) + ".log";
+            String path = logDir.getAbsolutePath() + "\\Game_" + new SimpleDateFormat("yyyy_MMM_dd").format(now) + ".log";
 
             fileHandler = new FileHandler(path, true);
             LOGGER.addHandler(fileHandler);

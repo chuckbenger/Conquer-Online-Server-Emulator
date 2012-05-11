@@ -18,11 +18,13 @@
 package conquerboxgame.net;
 
 /**
- *
+ * IHandler is used to enable worker threads to call the class
+ * that implements this interface in order to register that data needs
+ * to be sent to a specific client
  * @author chuck
  */
-public class ICallback {
+public interface IHandler {
     
-    //comment
+    public void handle(ServerDataEvent event);
     
 }

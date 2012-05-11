@@ -17,10 +17,29 @@
  */
 package conquerboxgame.net;
 
+import org.jboss.netty.channel.Channel;
+
 /**
- *
+ * SeverDataEvent is used to encapsulate a 
  * @author chuck
  */
 public class ServerDataEvent {
+    
+    private byte []packet;
+    private Channel channel;
+
+    public ServerDataEvent(byte[] packet, Channel channel) {
+        this.packet = packet;
+        this.channel = channel;
+    }
+
+    public Channel getChannel() {
+        return channel;
+    }
+
+    public byte[] getPacket() {
+        return packet;
+    }
+    
     
 }
