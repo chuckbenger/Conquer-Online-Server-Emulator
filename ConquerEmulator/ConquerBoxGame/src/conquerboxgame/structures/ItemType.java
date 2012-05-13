@@ -15,40 +15,22 @@
  * the License.
  * ***************************************************************************
  */
-
-
-
-package conquerboxgame.net;
-
-//~--- non-JDK imports --------------------------------------------------------
-
-import conquerboxgame.core.Client;
+package conquerboxgame.structures;
 
 /**
- * SeverDataEvent is used to encapsulate a a client and a packet to be processed by a handler
+ *
  * @author chuck
  */
-public class ServerDataEvent
+public class ItemType 
 {
-    private Client client;    // The client itself
-    private byte[] packet;    // The packet for this client
 
-    public ServerDataEvent(byte[] packet, Client client)
-    {
-        this.packet = packet;
-        this.client = client;
-    }
+            public String Name;
+            public String Description;
+            public int ID;
+            public int Price;
+            public short Class, Prof, Level, Str_Req, Dex_Req, Vit_Req,
+                Spi_Req, Damage_Max, Damage_Min, Defense_Add, Dex_Add, Dodge_Add,
+                HP_Add, MP_Add, Magic_Attack, MDefense_Add, Dura, MaxDura, Frequency;
+            public byte Range, TradeType;
 
-    public Client getClient()
-    {
-        return client;
-    }
-
-    public byte[] getPacket()
-    {
-        return packet;
-    }
 }
-
-
-//~ Formatted by Jindent --- http://www.jindent.com

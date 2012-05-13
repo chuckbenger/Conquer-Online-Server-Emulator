@@ -2,7 +2,6 @@ package conquerboxauth.Server;
 
 import conquerboxauth.MyLogger;
 import java.util.HashMap;
-import java.util.logging.Level;
 import org.jboss.netty.buffer.ChannelBuffer;
 import org.jboss.netty.channel.Channel;
 import org.jboss.netty.channel.ChannelHandlerContext;

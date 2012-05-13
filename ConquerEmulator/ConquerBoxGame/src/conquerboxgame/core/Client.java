@@ -15,9 +15,16 @@
  * the License.
  * ***************************************************************************
  */
+
+
+
 package conquerboxgame.core;
 
+//~--- non-JDK imports --------------------------------------------------------
+
 import conquerboxgame.crypto.Cryptographer;
+import org.jboss.netty.buffer.ChannelBuffer;
+import org.jboss.netty.channel.Channel;
 
 /**
  *
@@ -25,147 +32,223 @@ import conquerboxgame.crypto.Cryptographer;
  */
 public class Client extends Entity
 {
-    private long   gold;
-    private long   experience;
-    private int    strength;
-    private int    dexterity;
-    private int    vitality;
-    private int    sprit;
-    private int    statPoints;
-    private int    magic;
-    private int    pkPoints;
-    private int    hair;
-    private short  level;
-    private short  playerClass;
-    private short  reborn;
-    private String name;
-    
+    private int           characterId;
+    private Channel       channel;
     private Cryptographer crypt;
-    
+    private int           dexterity;
+    private long          experience;
+    private long          gold;
+    private int           hair;
+    private short         level;
+    private int           magic;
+    private String        name;
+    private int           pkPoints;
+    private int           playerClass;
+    private short         reborn;
+    private int           sprit;
+    private int           statPoints;
+    private int           strength;
+    private long          token;
+    private int           vitality;
+
     /**
      * Creates a new client object
      */
-    public Client()
+    public Client(Channel channel)
     {
-        crypt = new Cryptographer();
+        name         = "chuck";
+        this.channel = channel;
+        crypt        = new Cryptographer();
     }
 
     // <editor-fold defaultstate="collapsed" desc="Getters">
 
-    public int getHair() {
-        return hair;
+    public int getCharacterId() {
+        return characterId;
     }
     
-    public int getDexterity() {
+    
+    public long getToken()
+    {
+        return token;
+    }
+
+    public Cryptographer getCrypt()
+    {
+        return crypt;
+    }
+
+    public Channel getChannel()
+    {
+        return channel;
+    }
+
+    public int getHair()
+    {
+        return hair;
+    }
+
+    public int getDexterity()
+    {
         return dexterity;
     }
 
-    public long getExperience() {
+    public long getExperience()
+    {
         return experience;
     }
 
-    public long getGold() {
+    public long getGold()
+    {
         return gold;
     }
 
-    public short getLevel() {
+    public short getLevel()
+    {
         return level;
     }
 
-    public int getMagic() {
+    public int getMagic()
+    {
         return magic;
     }
 
-    public String getName() {
+    public String getName()
+    {
         return name;
     }
 
-    public int getPkPoints() {
+    public int getPkPoints()
+    {
         return pkPoints;
     }
 
-    public short getPlayerClass() {
+    public int getPlayerClass()
+    {
         return playerClass;
     }
 
-    public short getReborn() {
+    public short getReborn()
+    {
         return reborn;
     }
 
-    public int getSprit() {
+    public int getSprit()
+    {
         return sprit;
     }
 
-    public int getStatPoints() {
+    public int getStatPoints()
+    {
         return statPoints;
     }
 
-    public int getStrength() {
+    public int getStrength()
+    {
         return strength;
     }
 
-    public int getVitality() {
+    public int getVitality()
+    {
         return vitality;
     }
+
     // </editor-fold>
 
     // <editor-fold defaultstate="collapsed" desc="Setters">
 
-    public void setHair(int hair) {
+    public void setCharacterId(int characterId) {
+        this.characterId = characterId;
+    }
+    
+    
+    public void setToken(long token)
+    {
+        this.token = token;
+    }
+
+    public void setHair(int hair)
+    {
         this.hair = hair;
     }
-        
-    public void setDexterity(int dexterity) {
+
+    public void setDexterity(int dexterity)
+    {
         this.dexterity = dexterity;
     }
 
-    public void setExperience(long experience) {
+    public void setExperience(long experience)
+    {
         this.experience = experience;
     }
 
-    public void setGold(long gold) {
+    public void setGold(long gold)
+    {
         this.gold = gold;
     }
 
-    public void setLevel(short level) {
+    public void setLevel(short level)
+    {
         this.level = level;
     }
 
-    public void setMagic(int magic) {
+    public void setMagic(int magic)
+    {
         this.magic = magic;
     }
 
-    public void setName(String name) {
+    public void setName(String name)
+    {
         this.name = name;
     }
 
-    public void setPkPoints(int pkPoints) {
+    public void setPkPoints(int pkPoints)
+    {
         this.pkPoints = pkPoints;
     }
 
-    public void setPlayerClass(short playerClass) {
+    public void setPlayerClass(int playerClass)
+    {
         this.playerClass = playerClass;
     }
 
-    public void setReborn(short reborn) {
+    public void setReborn(short reborn)
+    {
         this.reborn = reborn;
     }
 
-    public void setSprit(int sprit) {
+    public void setSprit(int sprit)
+    {
         this.sprit = sprit;
     }
 
-    public void setStatPoints(int statPoints) {
+    public void setStatPoints(int statPoints)
+    {
         this.statPoints = statPoints;
     }
 
-    public void setStrength(int strength) {
+    public void setStrength(int strength)
+    {
         this.strength = strength;
     }
 
-    public void setVitality(int vitality) {
+    public void setVitality(int vitality)
+    {
         this.vitality = vitality;
     }
+
     // </editor-fold>
-      
+
+    /**
+     * Encrypt the packet and send it to the client
+     * @param packet the packet to encrypt
+     */
+    public void send(ChannelBuffer buffer)
+    {
+        crypt.Encrpyt(buffer.array());
+        channel.write(buffer);
+    }
 }
+
+
+//~ Formatted by Jindent --- http://www.jindent.com

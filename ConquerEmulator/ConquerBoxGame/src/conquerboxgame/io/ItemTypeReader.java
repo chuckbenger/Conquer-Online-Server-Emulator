@@ -15,40 +15,23 @@
  * the License.
  * ***************************************************************************
  */
+package conquerboxgame.io;
 
-
-
-package conquerboxgame.net;
-
-//~--- non-JDK imports --------------------------------------------------------
-
-import conquerboxgame.core.Client;
+import conquerboxgame.structures.ItemType;
+import java.util.HashMap;
 
 /**
- * SeverDataEvent is used to encapsulate a a client and a packet to be processed by a handler
+ *
  * @author chuck
  */
-public class ServerDataEvent
+public class ItemTypeReader 
 {
-    private Client client;    // The client itself
-    private byte[] packet;    // The packet for this client
-
-    public ServerDataEvent(byte[] packet, Client client)
-    {
-        this.packet = packet;
-        this.client = client;
-    }
-
-    public Client getClient()
-    {
-        return client;
-    }
-
-    public byte[] getPacket()
-    {
-        return packet;
-    }
+     private static HashMap<Integer, ItemType> items = new HashMap<>();
+     
+     public static void load(String path)
+     {
+         
+     }
+     
+    
 }
-
-
-//~ Formatted by Jindent --- http://www.jindent.com

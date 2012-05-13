@@ -2,10 +2,10 @@ package conquerboxauth.Server;
 
 
 import conquerboxauth.MyLogger;
-
 import conquerboxauth.Server.Packets.AuthResponse;
 import conquerboxauth.Server.Packets.PacketReader;
 import conquerboxauth.Server.Packets.PacketTypes;
+import java.nio.ByteOrder;
 import java.util.HashMap;
 import java.util.logging.Level;
 import org.jboss.netty.buffer.ChannelBuffer;
@@ -92,7 +92,11 @@ public class AuthHandler extends SimpleChannelHandler implements IHandler
     public void handle(AuthDataEvent event, Channel channel)
     {
         PacketReader reader = new PacketReader(event.getBuffer());
-
+        ChannelBuffer buffer  =ChannelBuffers.buffer(ByteOrder.LITTLE_ENDIAN, 1024);
+        buffer.writeBytes(event.getBuffer());
+        
+        int ptype = buffer.readUnsignedShort();
+        
         //Skip over the length field since it's checked in decoder
         reader.setOffset(2);
 

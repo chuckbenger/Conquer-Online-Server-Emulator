@@ -22,7 +22,8 @@ import conquerboxgame.net.ServerDataEvent;
 import java.util.HashMap;
 import java.util.Queue;
 import java.util.concurrent.ConcurrentLinkedDeque;
-import org.jboss.netty.channel.Channel;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  * Worker provides a class that you can append data to a queue that the worker
@@ -36,7 +37,7 @@ public class Worker implements Runnable
     private boolean                handle;       //Whether to continue handling packets
     private boolean                stopAdd;      //Whether to stop allowing packets to be added
     private boolean                gracefullShutdown; //Whether the gracefull shutdown method was triggered
-    private final HashMap<Channel, Queue<byte[]>> packetQueue;  //Queued data to be processed
+    private final HashMap<Client, Queue<byte[]>> packetQueue;  //Queued data to be processed
     
 
     
@@ -57,7 +58,7 @@ public class Worker implements Runnable
      * @param channel the channel to add the packet to
      * @param packet the packet
      */
-    public void add(Channel channel, byte[] packet)
+    public void add(Client client, byte[] packet)
     {
         if(stopAdd)
             return;
@@ -71,13 +72,13 @@ public class Worker implements Runnable
         synchronized(packetQueue)
         {
             //Attempt to get a queu using the input channel
-            Queue<byte[]> queue = packetQueue.get(channel);
+            Queue<byte[]> queue = packetQueue.get(client);
             
             //If it's null create a new queue
             if(queue == null)
             {
                 queue = new ConcurrentLinkedDeque<>();
-                packetQueue.put(channel, queue);
+                packetQueue.put(client, queue);
             }
             
             //Append the packet to the queue
@@ -98,9 +99,23 @@ public class Worker implements Runnable
         
         while(handle)
         {
-            for(Channel channel : packetQueue.keySet())
+            if(packetQueue.isEmpty())
             {
-                Queue<byte[]> queue = packetQueue.get(channel);
+                try 
+                {
+                    synchronized(packetQueue)
+                    {
+                        packetQueue.wait();
+                    }
+                } 
+                catch (InterruptedException ex) {
+                    MyLogger.appendException(ex.getStackTrace(), ex.toString());
+                }
+            }
+           
+            for(Client client : packetQueue.keySet())
+            {
+                Queue<byte[]> queue = packetQueue.get(client);
                 
                 //If empty then skip
                 if(queue.isEmpty())
@@ -116,7 +131,7 @@ public class Worker implements Runnable
                 
                  //Handle the packet
                 if(process != null)
-                    handler.handle(new ServerDataEvent(process, channel));
+                    handler.handle(new ServerDataEvent(process, client));
 
             }
             
