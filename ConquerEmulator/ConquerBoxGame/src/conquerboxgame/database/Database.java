@@ -127,7 +127,9 @@ public class Database
                         + "`game_accounts`.`level`," + "`game_accounts`.`class`," + "`game_accounts`.`reborn`,"
                         + "`game_accounts`.`display_name`," + "`game_accounts`.`string_count`,"
                         + "`game_accounts`.`name_length`," + "`game_accounts`.`name`,"
-                        + "`game_accounts`.`spouse_length`," + "`game_accounts`.`spouse_name`"
+                        + "`game_accounts`.`spouse_length`," + "`game_accounts`.`spouse_name`,"
+                        + "`game_accounts`.`x`," + "`game_accounts`.`y`,"
+                        + "`game_accounts`.`map`"
                         + "FROM `conquerbox`.`game_accounts`" + " WHERE account_id = '" + c.getId() + "'";
 
         try
@@ -154,8 +156,50 @@ public class Database
             c.setPlayerClass(set.getInt("class"));
             c.setReborn(set.getShort("reborn"));
             c.setName(set.getString("name"));
-
+            c.setX(set.getInt("x"));
+            c.setY(set.getInt("y"));
+            c.setMap(set.getInt("map"));
             return true;
+        }
+        catch (SQLException ex)
+        {
+            MyLogger.appendException(ex.getStackTrace(), ex.getMessage());
+
+            return false;
+        }
+    }
+    
+    
+    /**
+     * Persists a client object to the database
+     * @param c the client to persist
+     */
+    public boolean persistClient(Client c)
+    {
+        String insert = "UPDATE `conquerbox`.`game_accounts` SET "
+                        + "`game_accounts`.`model` = '" +  c.getModel() + "'," 
+                        + "`game_accounts`.`hair` = '" +  c.getHair() + "'," 
+                        + "`game_accounts`.`gold`= '" +  c.getGold() + "'," 
+                        + "`game_accounts`.`exp`= '" +  c.getExperience() + "'," 
+                        + "`game_accounts`.`strength`= '" +  c.getStrength() + "'," 
+                        + "`game_accounts`.`dex`= '" +  c.getDexterity() + "'," 
+                        + "`game_accounts`.`vit`= '" +  c.getVitality() + "',"  
+                        + "`game_accounts`.`spirit`= '" +  c.getSprit() + "'," 
+                        + "`game_accounts`.`stat_points`= '" +  c.getStatPoints() + "'," 
+                        + "`game_accounts`.`hp`= '" +  c.getHealth() + "'," 
+                        + "`game_accounts`.`mp`= '" +  c.getMagic() + "'," 
+                        + "`game_accounts`.`pk_points`= '" +  c.getPkPoints() + "'," 
+                        + "`game_accounts`.`level`= '" +  c.getLevel() + "'," 
+                        + "`game_accounts`.`class`= '" +  c.getPlayerClass() + "'," 
+                        + "`game_accounts`.`reborn`= '" +  c.getReborn() + "'," 
+                        + "`game_accounts`.`x`= '" +  c.getX() + "'," 
+                        + "`game_accounts`.`y`= '" +  c.getY() + "'," 
+                        + "`game_accounts`.`map`= '" +  c.getMap() + "'" 
+                        + " WHERE character_id = '" + (c.getCharacterId() - 1000000) + "'";
+        
+        try
+        {
+            return stmt.executeUpdate(insert) == 1;
         }
         catch (SQLException ex)
         {

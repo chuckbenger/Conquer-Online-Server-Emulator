@@ -67,7 +67,7 @@ public class GameHandler extends SimpleChannelHandler
     {
         synchronized (Kernel.CLIENTS)
         {
-            Kernel.CLIENTS.remove(e.getChannel());
+            Kernel.DATABASE.persistClient(Kernel.CLIENTS.remove(e.getChannel()));
         }
     }
 

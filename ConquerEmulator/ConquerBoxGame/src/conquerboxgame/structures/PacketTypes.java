@@ -20,7 +20,7 @@ package conquerboxgame.structures;
 
 /**
  * This class contains all the packet types used by the game server
- * @author chuck 
+ * @author chuck
  */
 public class PacketTypes
 {
@@ -28,6 +28,7 @@ public class PacketTypes
     public static final int CHARACTER_CREATION = 1001;
     public static final int CHARACTER_DATA     = 1006;
     public static final int CHAT               = 1004;
+    public static final int ENTITY_MOVE        = 1005;
     public static final int GENERAL_DATA       = 1010;
 }
 

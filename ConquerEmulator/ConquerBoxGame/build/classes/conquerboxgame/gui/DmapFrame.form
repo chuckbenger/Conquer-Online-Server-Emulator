@@ -41,6 +41,9 @@
   </Layout>
   <SubComponents>
     <Component class="javax.swing.JLabel" name="dmapPreview">
+      <Events>
+        <EventHandler event="mousePressed" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="dmapPreviewMousePressed"/>
+      </Events>
     </Component>
     <Container class="javax.swing.JToolBar" name="jToolBar1">
       <Properties>

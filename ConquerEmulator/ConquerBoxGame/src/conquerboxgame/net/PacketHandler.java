@@ -60,6 +60,7 @@ public class PacketHandler implements IHandler
     @Override
     public void handle(ServerDataEvent event)
     {
+        long id;
         String response;
         Client client = event.getClient();
 
@@ -103,12 +104,16 @@ public class PacketHandler implements IHandler
             {
                 if (!Kernel.DATABASE.loadCharacterData(client))
                 {
-                    System.out.println("Failed");
+                    client.send(AuthMessage.build(0, "SYSTEM", "ALLUSERS", "Failed to load character",
+                                                  ChatTypes.LOGININFORMATION));
+
+                    break;
                 }
             }
 
             client.send(AuthMessage.build(0, "SYSTEM", "ALLUSERS", response, ChatTypes.LOGININFORMATION));
-            client.send(CharacterInfo.build(client));
+            if (response.equals("ANSWER_OK"))
+                client.send(CharacterInfo.build(client));
 
             break;
 
@@ -138,7 +143,8 @@ public class PacketHandler implements IHandler
             client.setPlayerClass(buffer.readUnsignedShort());
             if (!Kernel.DATABASE.createCharacter(client))
                 response = "Account creation failed";
-            client.send(AuthMessage.build(1545, "SYSTEM", "ALLUSERS", response, ChatTypes.LOGININFORMATION));
+            client.send(AuthMessage.build(0, "SYSTEM", "ALLUSERS", response, ChatTypes.LOGININFORMATION));
+            client.getChannel().close();
 
             break;
 
@@ -156,9 +162,32 @@ public class PacketHandler implements IHandler
          * General data that is requested from the client.
          */
         case PacketTypes.GENERAL_DATA :
-            long timer = buffer.readInt();
+            handleGeneralPacket(client, buffer);
+            break;
+            
+        case PacketTypes.ENTITY_MOVE:
+            id = buffer.readUnsignedInt();
+            if(id == client.getCharacterId())
+            {
+                client.setDirection((byte)((buffer.readByte()& 0xFF) % 8));
+                client.adjustPosByDirection();
+            }
+            break;
+
+        default :
+            MyLogger.appendLog(Level.INFO, "Unkown packet type => " + type);
+
+            break;
+        }
+    }
+    
+    public void handleGeneralPacket(Client client, ChannelBuffer buffer)
+    {
+        long timer = buffer.readInt();
             long other = System.currentTimeMillis() / 10000L;
             long id    = buffer.readInt();
+            int  x;
+            int  y;
 
             buffer.readerIndex(24);
 
@@ -170,8 +199,18 @@ public class PacketHandler implements IHandler
              * Request the clients position
              */
             case GeneralTypes.POS_REQUEST :
-                client.send(GeneralUpdate.build(client.getCharacterId(), 250, 250, 0, 0, 1036, 0,
-                                                GeneralTypes.POS_REQUEST));
+                client.send(GeneralUpdate.build(client.getCharacterId(), client.getX(), client.getY(), 0, 0,
+                                                client.getMap(), 0, GeneralTypes.POS_REQUEST));
+
+                break;
+
+            case GeneralTypes.AVATAR :
+                if (id == client.getCharacterId())
+                {
+                    buffer.readerIndex(20);
+                    client.setX(buffer.readUnsignedShort());
+                    client.setY(buffer.readUnsignedShort());
+                }
 
                 break;
 
@@ -181,13 +220,6 @@ public class PacketHandler implements IHandler
                 break;
             }
 
-            break;
-
-        default :
-            MyLogger.appendLog(Level.INFO, "Unkown packet type => " + type);
-
-            break;
-        }
     }
 }
 

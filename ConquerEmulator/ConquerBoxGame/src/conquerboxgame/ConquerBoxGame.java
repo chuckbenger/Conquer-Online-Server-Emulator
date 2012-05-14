@@ -15,49 +15,65 @@
  * the License.
  * ***************************************************************************
  */
+
+
+
 package conquerboxgame;
 
+//~--- non-JDK imports --------------------------------------------------------
+
 import conquerboxgame.core.Kernel;
+
 import conquerboxgame.gui.DmapFrame;
+
 import conquerboxgame.io.DMapLoader;
+
 import conquerboxgame.net.GameHandler;
 import conquerboxgame.net.GameServerDecoder;
-import java.io.IOException;
-import java.net.InetSocketAddress;
-import java.util.concurrent.Executors;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import javax.xml.parsers.ParserConfigurationException;
+
 import org.jboss.netty.bootstrap.ServerBootstrap;
 import org.jboss.netty.channel.*;
 import org.jboss.netty.channel.group.ChannelGroup;
 import org.jboss.netty.channel.group.DefaultChannelGroup;
 import org.jboss.netty.channel.socket.nio.NioServerSocketChannelFactory;
+
 import org.xml.sax.SAXException;
+
+//~--- JDK imports ------------------------------------------------------------
+
+import java.io.IOException;
+
+import java.net.InetSocketAddress;
+
+import java.util.concurrent.Executors;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
+import javax.xml.parsers.ParserConfigurationException;
 
 /**
  *
  * @author chuck
  */
-public class ConquerBoxGame {
-
+public class ConquerBoxGame
+{
     private static final ChannelGroup CHANNEL_GROUP = new DefaultChannelGroup("Auth-Server");
-    private static ChannelFactory factory;
-    
-    
+    private static ChannelFactory     factory;
+
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) throws IOException
     {
-        try {
-            
-            boolean testDMap = false; //Whether you wan't a test dmap frame to show up
-            
+        try
+        {
+            boolean testDMap = false;    // Whether you wan't a test dmap frame to show up
+
+            // Loads the dmaps into system memory
             DMapLoader.load("res/GameMaps.xml/");
-            
-         
-            factory = new NioServerSocketChannelFactory(Executors.newCachedThreadPool(), Executors.newCachedThreadPool());
+            factory = new NioServerSocketChannelFactory(Executors.newCachedThreadPool(),
+                    Executors.newCachedThreadPool());
+
             ServerBootstrap bootstrap = new ServerBootstrap(factory);
 
             bootstrap.setPipelineFactory(new ChannelPipelineFactory()
@@ -68,29 +84,32 @@ public class ConquerBoxGame {
                     return Channels.pipeline(new GameServerDecoder(), new GameHandler());
                 }
             });
-
             bootstrap.setOption("child.tcpNoDelay", true);
             bootstrap.setOption("child.keepAlive", true);
 
             Channel server = bootstrap.bind(new InetSocketAddress(Kernel.PORT));
 
             CHANNEL_GROUP.add(server);
-
             MyLogger.appendLog(Level.INFO, "Game was bound to port " + Kernel.PORT);
-            
-            
-            if(testDMap)
+
+            if (testDMap)
             {
                 DmapFrame frame = new DmapFrame();
+
                 frame.setVisible(true);
                 frame.renderDMaps();
             }
-
-        } catch (ParserConfigurationException ex) {
-            MyLogger.appendException(ex.getStackTrace(), ex.getMessage());
-        } catch (SAXException ex) {
+        }
+        catch (ParserConfigurationException ex)
+        {
             MyLogger.appendException(ex.getStackTrace(), ex.getMessage());
         }
-        
+        catch (SAXException ex)
+        {
+            MyLogger.appendException(ex.getStackTrace(), ex.getMessage());
+        }
     }
 }
+
+
+//~ Formatted by Jindent --- http://www.jindent.com

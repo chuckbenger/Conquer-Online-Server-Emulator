@@ -52,6 +52,12 @@ public class DmapFrame extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        dmapPreview.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                dmapPreviewMousePressed(evt);
+            }
+        });
+
         jToolBar1.setRollover(true);
 
         map.addActionListener(new java.awt.event.ActionListener() {
@@ -85,6 +91,10 @@ public class DmapFrame extends javax.swing.JFrame {
         
         dmapPreview.setIcon(maps.get(Integer.parseInt(map.getSelectedItem().toString())));
     }//GEN-LAST:event_mapActionPerformed
+
+    private void dmapPreviewMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_dmapPreviewMousePressed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_dmapPreviewMousePressed
 
     /**
      * @param args the command line arguments

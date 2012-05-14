@@ -15,6 +15,9 @@
  * the License.
  * ***************************************************************************
  */
+
+
+
 package conquerboxgame.core;
 
 /**
@@ -22,73 +25,152 @@ package conquerboxgame.core;
  * game entities have
  * @author chuck
  */
-public class Entity 
+public class Entity
 {
-    protected long   id;
-    protected int    health; 
-    protected int    x;
-    protected int    y;
-    protected int    prevX;
-    protected int    prevY;
-    protected long   model;
+    protected byte direction;
+    protected int  health;
+    protected long id;
+    protected int  map;
+    protected long model;
+    protected int  prevX;
+    protected int  prevY;
+    protected int  x;
+    protected int  y;
 
-   
+    // <editor-fold defaultstate="collapsed" desc="Getters">
+    public byte getDirection()
+    {
+        return direction;
+    }
 
-   // <editor-fold defaultstate="collapsed" desc="Getters">
-     public long getModel() {
+    public int getMap()
+    {
+        return map;
+    }
+
+    public long getModel()
+    {
         return model;
     }
-     
-    public int getHealth() {
+
+    public int getHealth()
+    {
         return health;
     }
 
-    public long getId() {
+    public long getId()
+    {
         return id;
     }
 
-    public int getPrevX() {
+    public int getPrevX()
+    {
         return prevX;
     }
 
-    public int getPrevY() {
+    public int getPrevY()
+    {
         return prevY;
     }
 
-    public int getX() {
+    public int getX()
+    {
         return x;
     }
 
-    public int getY() {
+    public int getY()
+    {
         return y;
     }
-   // </editor-fold>
 
-   // <editor-fold defaultstate="collapsed" desc="Setters">
+    // </editor-fold>
 
-    public void setModel(long model) {
+    // <editor-fold defaultstate="collapsed" desc="Setters">
+    public void setMap(int map)
+    {
+        this.map = map;
+    }
+
+    public void setModel(long model)
+    {
         this.model = model;
     }
-    
-    
-    public void setHealth(int health) {
+
+    public void setHealth(int health)
+    {
         this.health = health;
     }
 
-    public void setId(long id) {
+    public void setId(long id)
+    {
         this.id = id;
     }
 
-    public void setX(int x) {
+    public void setX(int x)
+    {
         this.prevX = this.x;
-        this.x = x;
+        this.x     = x;
     }
 
-    public void setY(int y) {
+    public void setY(int y)
+    {
         this.prevY = this.y;
-        this.y = y;
+        this.y     = y;
     }
+
+    public void setDirection(byte direction)
+    {
+        this.direction = direction;
+    }
+
     // </editor-fold>
     
     
+    /**
+     * Adjusts the clients location x,y coordinate based in it's direction
+     */
+    public void adjustPosByDirection()
+    {
+        switch (direction)
+        {
+        case 0 :
+            y++;
+            break;
+
+        case 1 :
+            y++;
+            x--;
+            break;
+
+        case 2 :
+            x--;
+            break;
+
+        case 3 :
+            x--;
+            y--;
+            break;
+
+        case 4 :
+            y--;
+            break;
+
+        case 5 :
+            y--;
+            x++;
+            break;
+
+        case 6 :
+            x++;
+            break;
+
+        case 7 :
+            x++;
+            y++;
+            break;
+        }
+    }
 }
+
+
+//~ Formatted by Jindent --- http://www.jindent.com
