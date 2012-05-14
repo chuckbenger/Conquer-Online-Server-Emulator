@@ -18,17 +18,22 @@
 package conquerboxgame;
 
 import conquerboxgame.core.Kernel;
+import conquerboxgame.gui.DmapFrame;
+import conquerboxgame.io.DMapLoader;
 import conquerboxgame.net.GameHandler;
 import conquerboxgame.net.GameServerDecoder;
 import java.io.IOException;
 import java.net.InetSocketAddress;
 import java.util.concurrent.Executors;
 import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.xml.parsers.ParserConfigurationException;
 import org.jboss.netty.bootstrap.ServerBootstrap;
 import org.jboss.netty.channel.*;
 import org.jboss.netty.channel.group.ChannelGroup;
 import org.jboss.netty.channel.group.DefaultChannelGroup;
 import org.jboss.netty.channel.socket.nio.NioServerSocketChannelFactory;
+import org.xml.sax.SAXException;
 
 /**
  *
@@ -39,32 +44,53 @@ public class ConquerBoxGame {
     private static final ChannelGroup CHANNEL_GROUP = new DefaultChannelGroup("Auth-Server");
     private static ChannelFactory factory;
     
+    
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) throws IOException
     {
-     
-        factory = new NioServerSocketChannelFactory(Executors.newCachedThreadPool(), Executors.newCachedThreadPool());
-        ServerBootstrap bootstrap = new ServerBootstrap(factory);
+        try {
+            
+            boolean testDMap = true; //Whether you wan't a test dmap frame to show up
+            
+            DMapLoader.load("res/GameMaps.xml/");
+            
+         
+            factory = new NioServerSocketChannelFactory(Executors.newCachedThreadPool(), Executors.newCachedThreadPool());
+            ServerBootstrap bootstrap = new ServerBootstrap(factory);
 
-        bootstrap.setPipelineFactory(new ChannelPipelineFactory()
-        {
-            @Override
-            public ChannelPipeline getPipeline() throws Exception
+            bootstrap.setPipelineFactory(new ChannelPipelineFactory()
             {
-                return Channels.pipeline(new GameServerDecoder(), new GameHandler());
+                @Override
+                public ChannelPipeline getPipeline() throws Exception
+                {
+                    return Channels.pipeline(new GameServerDecoder(), new GameHandler());
+                }
+            });
+
+            bootstrap.setOption("child.tcpNoDelay", true);
+            bootstrap.setOption("child.keepAlive", true);
+
+            Channel server = bootstrap.bind(new InetSocketAddress(Kernel.PORT));
+
+            CHANNEL_GROUP.add(server);
+
+            MyLogger.appendLog(Level.INFO, "Game was bound to port " + Kernel.PORT);
+            
+            
+            if(testDMap)
+            {
+                DmapFrame frame = new DmapFrame();
+                frame.setVisible(true);
+                frame.renderDMaps();
             }
-        });
 
-        bootstrap.setOption("child.tcpNoDelay", true);
-        bootstrap.setOption("child.keepAlive", true);
-
-        Channel server = bootstrap.bind(new InetSocketAddress(Kernel.PORT));
-
-        CHANNEL_GROUP.add(server);
-
-        MyLogger.appendLog(Level.INFO, "Game was bound to port " + Kernel.PORT);
+        } catch (ParserConfigurationException ex) {
+            MyLogger.appendException(ex.getStackTrace(), ex.getMessage());
+        } catch (SAXException ex) {
+            MyLogger.appendException(ex.getStackTrace(), ex.getMessage());
+        }
         
     }
 }

@@ -170,7 +170,7 @@ public class PacketHandler implements IHandler
              * Request the clients position
              */
             case GeneralTypes.POS_REQUEST :
-                client.send(GeneralUpdate.build(client.getCharacterId(), 438, 400, 0, 0, 1002, 0,
+                client.send(GeneralUpdate.build(client.getCharacterId(), 250, 250, 0, 0, 1036, 0,
                                                 GeneralTypes.POS_REQUEST));
 
                 break;

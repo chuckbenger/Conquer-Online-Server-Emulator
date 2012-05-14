@@ -72,7 +72,7 @@ public class CharacterInfo
         Packet.writeUnSignedShort(PacketTypes.CHARACTER_DATA);
         Packet.writeUnSignedInt(Client.getCharacterId());
         Packet.writeUnSignedInt(Client.getModel());
-        Packet.writeUnSignedShort(310);
+        Packet.writeUnSignedShort(311);
         Packet.writeUnSignedShort(0);
         Packet.writeUnSignedInt(Client.getGold());
         Packet.writeUnSignedInt(Client.getExperience());

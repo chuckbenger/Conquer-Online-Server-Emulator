@@ -31,7 +31,7 @@ import java.util.logging.Level;
  */
 public class Database
 {
-    private static final String PASSWORD = "toor";
+    private static final String PASSWORD = "july301992";
     private static final String URL      = "jdbc:mysql://192.168.1.100:3306/ConquerBox";
     private static final String USERNAME = "root";
     private Statement           stmt;
@@ -128,7 +128,7 @@ public class Database
                         + "`game_accounts`.`display_name`," + "`game_accounts`.`string_count`,"
                         + "`game_accounts`.`name_length`," + "`game_accounts`.`name`,"
                         + "`game_accounts`.`spouse_length`," + "`game_accounts`.`spouse_name`"
-                        + "FROM `conquerbox`.`game_accounts`" + " WHERE account_id = '" + c.getCharacterId() + "'";
+                        + "FROM `conquerbox`.`game_accounts`" + " WHERE account_id = '" + c.getId() + "'";
 
         try
         {
