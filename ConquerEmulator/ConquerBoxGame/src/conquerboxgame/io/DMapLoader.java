@@ -57,7 +57,10 @@ public class DMapLoader
     // Flags
     private static final byte PORTAL = 0x1 << 1;
     private static final byte VALID  = 0x1;
+    private static final byte HEIGHT = 0x7C;
+    private static final short HEIGHT_SIGN = 0x1 << 7;
 
+    
     /**
      * Loads the maps from the specified path
      * @param path the path containing the maps
@@ -122,6 +125,7 @@ public class DMapLoader
         long after = System.currentTimeMillis() - before;
 
         MyLogger.appendLog(Level.INFO, "Loaded DMaps in " + after + " ms");
+
     }
 
     private static void loadDMap(String id, String path)
@@ -183,7 +187,18 @@ public class DMapLoader
 
                     // Junk data
                     buffer.readShort();
-                    buffer.readShort();
+                    buffer.readByte();
+                    
+                    byte height = buffer.readByte();
+                    
+                    
+                    //If the height is negative then set the sign bit
+                    if(height < 0)
+                        dmap[j][i] |= HEIGHT_SIGN;
+                    
+                    //Set the height to bits 3 to 7
+                    dmap[j][i] |= (height << 2);
+                
                 }
 
                 // Junk data
@@ -213,6 +228,8 @@ public class DMapLoader
         {
             MyLogger.appendException(ex.getStackTrace(), ex.getMessage());
         }
+        
+     
     }
 
     /**
@@ -265,6 +282,21 @@ public class DMapLoader
     public static Set<Integer> getKeys()
     {
         return MAPS.keySet();
+    }
+    
+    public static byte getHeight(int map, int x, int y)
+    {
+        try
+        {
+            byte tile = MAPS.get(map)[x][y];
+
+            return (byte)((tile & HEIGHT_SIGN) | ((tile & HEIGHT) >> 2));
+        }
+        catch (Exception e)
+        {
+            e.printStackTrace();
+            return -100;
+        }
     }
 }
 

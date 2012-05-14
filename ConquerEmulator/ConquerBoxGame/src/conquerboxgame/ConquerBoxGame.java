@@ -52,7 +52,7 @@ public class ConquerBoxGame {
     {
         try {
             
-            boolean testDMap = true; //Whether you wan't a test dmap frame to show up
+            boolean testDMap = false; //Whether you wan't a test dmap frame to show up
             
             DMapLoader.load("res/GameMaps.xml/");
             

@@ -129,6 +129,7 @@ public class DmapFrame extends javax.swing.JFrame {
     }
     
     
+    public int max;
     
     public void renderDMaps()
     {
@@ -144,13 +145,20 @@ public class DmapFrame extends javax.swing.JFrame {
                     for(int j = 0; j < dmap[i].length; j++)
                     {
                         
-                        if(DMapLoader.valid(key, j, i)){
-                            g.setColor(Color.black);
-                            g.drawLine(j, i, j, i);   
-                        } else if(DMapLoader.isPortal(key, j, i))
+                        if(DMapLoader.valid(key, i, j)){
+                            int height = DMapLoader.getHeight(key, j, i);
+
+                            
+                            if(height > max)
+                                max = height;
+                            
+                            g.setColor(new Color((150 + height) % 255, (150 + height) % 255, (150 + height) % 255));
+                           
+                            g.drawLine(i, j, i, j);   
+                        } else if(DMapLoader.isPortal(key, i, j))
                         {
                             g.setColor(Color.green);
-                            g.fillRect(j, i, 10, 10);
+                            g.fillRect(i, j, 10, 10);
                         }
                     }
 
@@ -160,6 +168,8 @@ public class DmapFrame extends javax.swing.JFrame {
          maps.put(key, icon);
          map.addItem(key);
         }
+        
+        System.out.println(max);
     }
     
     private HashMap<Integer, ImageIcon> maps = new HashMap<>();
