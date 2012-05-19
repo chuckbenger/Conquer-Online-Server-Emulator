@@ -5,12 +5,16 @@ package conquerboxgame.database;
 import conquerboxgame.MyLogger;
 
 import conquerboxgame.core.Client;
+import conquerboxgame.structures.NPC;
 
 //~--- JDK imports ------------------------------------------------------------
 
 import java.sql.*;
+import java.util.ArrayList;
+import java.util.HashMap;
 
 import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -76,7 +80,7 @@ public class Database
     {
         try
         {
-            ResultSet set = stmt.executeQuery("SELECT 1 FROM Game_Accounts WHERE account_id = '" + acctId + "'");
+            ResultSet set = stmt.executeQuery("SELECT 1 FROM game_accounts WHERE account_id = '" + acctId + "'");
 
             return set.next();
         }
@@ -138,7 +142,7 @@ public class Database
 
             if (!set.next())
                 return false;
-            c.setCharacterId(1000000 + set.getInt("character_id"));
+            c.setCharacterId(set.getInt("character_id"));
             c.setId(set.getInt("account_id"));
             c.setModel(set.getInt("model"));
             c.setHair(set.getInt("hair"));
@@ -195,7 +199,7 @@ public class Database
                         + "`game_accounts`.`x`= '" +  c.getX() + "'," 
                         + "`game_accounts`.`y`= '" +  c.getY() + "'," 
                         + "`game_accounts`.`map`= '" +  c.getMap() + "'" 
-                        + " WHERE character_id = '" + (c.getCharacterId() - 1000000) + "'";
+                        + " WHERE character_id = '" + c.getCharacterId() + "'";
         
         try
         {
@@ -206,6 +210,59 @@ public class Database
             MyLogger.appendException(ex.getStackTrace(), ex.getMessage());
 
             return false;
+        }
+    }
+    
+    /**
+     * Loads the data for npc's into the input map
+     * @param npcMap the hash map to load npc data into
+     */
+    public boolean loadNPCData(HashMap<Integer,ArrayList<NPC>> npcMap)
+    {
+        String select = "SELECT NpcType, NotNpcType, MapID,SubType, Xcord, Ycord, flag, direction FROM tqnpcs ORDER BY MapID";
+        long before    = System.currentTimeMillis();
+        try {
+            ResultSet set = stmt.executeQuery(select);
+            
+            int previousMap = -1; //The previously map in the result set
+            ArrayList<NPC> npcs = new ArrayList<>();
+            
+            while(set.next())
+            {
+                int   npcID       = set.getInt("NpcType");
+                int   x           = set.getInt("Xcord");
+                int   y           = set.getInt("Ycord");
+                int   mapID       = set.getInt("MapID");
+                int   type        = set.getInt("SubType");
+                byte  direction   = set.getByte("NotNpcType");
+                short interaction = set.getShort("flag");
+                
+                NPC npc = new NPC(npcID, x, y, type, direction, interaction);
+                
+                if(previousMap == -1)
+                    previousMap = mapID;
+                
+                if(mapID != previousMap)
+                {
+                    npcMap.put(previousMap, npcs);
+                    npcs = new ArrayList<>();
+                }
+             
+                npcs.add(npc);
+              
+             
+                
+                previousMap = mapID;
+            }
+            long after = System.currentTimeMillis() - before;
+
+            MyLogger.appendLog(Level.INFO, "Loaded NPC'S in " + after + " ms");
+            return true;
+            
+        } catch (SQLException ex) {
+            
+           MyLogger.appendException(ex.getStackTrace(), ex.getMessage());
+           return false;
         }
     }
 }

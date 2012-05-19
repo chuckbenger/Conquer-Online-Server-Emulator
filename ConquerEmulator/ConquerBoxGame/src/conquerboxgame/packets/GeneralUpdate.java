@@ -24,11 +24,12 @@ package conquerboxgame.packets;
 
 import conquerboxgame.structures.GeneralTypes;
 import conquerboxgame.structures.PacketTypes;
-
 import org.jboss.netty.buffer.ChannelBuffer;
 
 /**
- *
+ *  This packet is sent to the World Server and to the client to manage
+ *   general actions such as walking, jumping, changing directions, and
+ *   other actions.
  * @author chuck
  */
 public class GeneralUpdate
@@ -45,10 +46,6 @@ public class GeneralUpdate
      *   22      ushort  Value_E
      *   24      uint   Data_Type
      *
-     *
-     * This packet is sent to the World Server and to the client to manage
-     *   general actions such as walking, jumping, changing directions, and
-     *   other actions.
      * @param id the character id to update
      * @param parm1
      * @param parm2

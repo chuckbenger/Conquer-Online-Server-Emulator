@@ -24,11 +24,6 @@ package conquerboxgame.packets;
 
 import conquerboxgame.structures.PacketTypes;
 import org.jboss.netty.buffer.ChannelBuffer;
-import org.jboss.netty.buffer.ChannelBuffers;
-
-//~--- JDK imports ------------------------------------------------------------
-
-import java.nio.ByteOrder;
 
 /**
  *

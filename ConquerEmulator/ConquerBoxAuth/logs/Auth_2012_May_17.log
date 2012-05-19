@@ -1,0 +1,80 @@
+May 17, 2012 8:09:59 PM conquerboxauth.MyLogger initLog
+INFO: Log for Thu May 17 20:09:59 CDT 2012
+May 17, 2012 8:09:59 PM conquerboxauth.MyLogger appendLog
+INFO: Auth was bound to port 9958
+May 17, 2012 8:10:13 PM conquerboxauth.MyLogger appendLog
+INFO: Login attempt from Fang => ���lʀ��;KG�/� Server => Test
+May 17, 2012 8:11:11 PM conquerboxauth.MyLogger appendLog
+INFO: Login attempt from Fang => ���lʀ�՚��� Server => �Test
+May 17, 2012 8:12:45 PM conquerboxauth.MyLogger appendLog
+INFO: Login attempt from Fang => ���lʀ�՚��� Server => �Test
+May 17, 2012 8:28:20 PM conquerboxauth.MyLogger initLog
+INFO: Log for Thu May 17 20:28:20 CDT 2012
+May 17, 2012 8:28:20 PM conquerboxauth.MyLogger appendLog
+INFO: Auth was bound to port 9958
+May 17, 2012 8:28:43 PM conquerboxauth.MyLogger appendLog
+INFO: Login attempt from Fang => eBn�1}|����� Server => �Test
+May 17, 2012 8:29:12 PM conquerboxauth.MyLogger appendLog
+INFO: Login attempt from Fang => eBn�1}|����� Server => �Test
+May 17, 2012 8:29:36 PM conquerboxauth.MyLogger appendLog
+INFO: Login attempt from Fang => eBn�1}|����� Server => �Test
+May 17, 2012 8:30:13 PM conquerboxauth.MyLogger initLog
+INFO: Log for Thu May 17 20:30:13 CDT 2012
+May 17, 2012 8:30:14 PM conquerboxauth.MyLogger appendLog
+INFO: Auth was bound to port 9958
+May 17, 2012 8:30:19 PM conquerboxauth.MyLogger appendLog
+INFO: Login attempt from Fang => eBn�1}|����� Server => �Test
+May 17, 2012 8:30:52 PM conquerboxauth.MyLogger appendLog
+INFO: Login attempt from Fang => eBn�1}|����� Server => �Test
+May 17, 2012 8:53:57 PM conquerboxauth.MyLogger appendLog
+INFO: Login attempt from Fang => eBn�1}|����� Server => �Test
+May 17, 2012 9:01:02 PM conquerboxauth.MyLogger appendLog
+INFO: Login attempt from Fang => eBn�1}|����� Server => �Test
+May 17, 2012 9:01:10 PM conquerboxauth.MyLogger appendLog
+INFO: Login attempt from Fang => eBn�1}|����� Server => �Test
+May 17, 2012 9:04:50 PM conquerboxauth.MyLogger appendLog
+INFO: Login attempt from Fang => ��}�ln����� Server => �Test
+May 17, 2012 9:05:56 PM conquerboxauth.MyLogger appendLog
+INFO: Login attempt from Fang => IZ\�<Nb_��� Server => �Test
+May 17, 2012 9:06:22 PM conquerboxauth.MyLogger appendLog
+INFO: Login attempt from Fang => IZ\�<Nb���� Server => �Test
+May 17, 2012 9:07:40 PM conquerboxauth.MyLogger appendLog
+INFO: Login attempt from Fang => IZ\�<Nb���� Server => �Test
+May 17, 2012 9:08:04 PM conquerboxauth.MyLogger appendLog
+INFO: Login attempt from Fang => IZ\�<Nb���� Server => �Test
+May 17, 2012 9:12:13 PM conquerboxauth.MyLogger appendLog
+INFO: Login attempt from Fang => IZ\�<Nb���� Server => �Test
+May 17, 2012 9:14:02 PM conquerboxauth.MyLogger appendLog
+INFO: Login attempt from Fang => IZ\�<Nb���� Server => �Test
+May 17, 2012 9:18:59 PM conquerboxauth.MyLogger appendLog
+INFO: Login attempt from Fang => IZ\�<Nb���� Server => �Test
+May 17, 2012 9:23:08 PM conquerboxauth.MyLogger appendLog
+INFO: Login attempt from Fang => IZ\�<Nb���� Server => �Test
+May 17, 2012 9:26:10 PM conquerboxauth.MyLogger appendLog
+INFO: Login attempt from Fang => ��}�ln�_��� Server => �Test
+May 17, 2012 9:26:41 PM conquerboxauth.MyLogger appendLog
+INFO: Login attempt from Fang => �w�Ub�Q _��� Server => �Test
+May 17, 2012 9:28:18 PM conquerboxauth.MyLogger appendLog
+INFO: Login attempt from Fang => ��}�ln����� Server => �Test
+May 17, 2012 9:29:01 PM conquerboxauth.MyLogger appendLog
+INFO: Login attempt from Fang => ���lʀ�՚��� Server => �Test
+May 17, 2012 9:29:36 PM conquerboxauth.MyLogger appendLog
+INFO: Login attempt from Fang => ���lʀ�՚��� Server => �Test
+May 17, 2012 9:29:51 PM conquerboxauth.MyLogger appendLog
+INFO: Login attempt from Fang => O�V�#�qK���� Server => �Test
+May 17, 2012 9:30:45 PM conquerboxauth.MyLogger appendLog
+INFO: Login attempt from Fang => O�V�#�qK���� Server => �Test
+May 17, 2012 9:38:54 PM conquerboxauth.MyLogger initLog
+INFO: Log for Thu May 17 21:38:54 CDT 2012
+May 17, 2012 9:38:54 PM conquerboxauth.MyLogger appendLog
+INFO: Auth was bound to port 9958
+May 17, 2012 9:39:04 PM conquerboxauth.MyLogger appendLog
+SEVERE: Unknown column 'username' in 'where clause'
+May 17, 2012 9:39:04 PM conquerboxauth.MyLogger appendLog
+INFO: Login attempt from Crow => O�V�#�qK���� Server => �Test
+May 17, 2012 9:39:34 PM conquerboxauth.MyLogger initLog
+INFO: Log for Thu May 17 21:39:34 CDT 2012
+May 17, 2012 9:39:34 PM conquerboxauth.MyLogger appendLog
+INFO: Auth was bound to port 9958
+May 17, 2012 9:39:37 PM conquerboxauth.MyLogger appendLog
+INFO: Login attempt from Crow => O�V�#�qK���� Server => �Test

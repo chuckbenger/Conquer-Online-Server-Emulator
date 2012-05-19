@@ -23,6 +23,8 @@ package conquerboxgame.core;
 //~--- non-JDK imports --------------------------------------------------------
 
 import conquerboxgame.crypto.Cryptographer;
+import conquerboxgame.structures.NPC;
+import java.util.ArrayList;
 import org.jboss.netty.buffer.ChannelBuffer;
 import org.jboss.netty.channel.Channel;
 
@@ -50,6 +52,13 @@ public class Client extends Entity
     private int           strength;
     private long          token;
     private int           vitality;
+    private int           health;
+    private long          model;
+    private int           prevX;
+    private int           prevY;
+    private int           map;
+    
+    private ArrayList<NPC> myNpcs = new ArrayList<>(); //Npcs currently on the clients screen
 
     /**
      * Creates a new client object
@@ -62,6 +71,31 @@ public class Client extends Entity
     }
 
     // <editor-fold defaultstate="collapsed" desc="Getters">
+
+     public int getPrevX()
+    {
+        return prevX;
+    }
+
+    public int getPrevY()
+    {
+        return prevY;
+    }
+
+    public int getMap()
+    {
+        return map;
+    }
+
+    public long getModel()
+    {
+        return model;
+    }
+
+    public int getHealth()
+    {
+        return health;
+    }
 
     public int getCharacterId() {
         return characterId;
@@ -153,14 +187,48 @@ public class Client extends Entity
         return vitality;
     }
 
+    public ArrayList<NPC> getMyNpcs() {
+        return myNpcs;
+    }
+
+    
     // </editor-fold>
 
     // <editor-fold defaultstate="collapsed" desc="Setters">
 
+    public void setMap(int map)
+    {
+        this.map = map;
+    }
+
+    public void setModel(long model)
+    {
+        this.model = model;
+    }
+
+    public void setHealth(int health)
+    {
+        this.health = health;
+    }
+    
     public void setCharacterId(int characterId) {
         this.characterId = characterId;
     }
     
+    @Override
+    public void setX(int x)
+    {
+        this.prevX = this.x;
+        this.x     = x;
+    }
+
+    @Override
+    public void setY(int y)
+    {
+        this.prevY = this.y;
+        this.y     = y;
+    }
+
     
     public void setToken(long token)
     {
@@ -237,8 +305,19 @@ public class Client extends Entity
         this.vitality = vitality;
     }
 
+    
     // </editor-fold>
 
+    
+    /**
+     * Adds a npc to the clients screen
+     * @param npc the npc to add
+     */
+    public void addNPC(NPC npc)
+    {
+        myNpcs.add(npc);
+    }
+    
     /**
      * Encrypt the packet and send it to the client
      * @param packet the packet to encrypt
@@ -247,6 +326,59 @@ public class Client extends Entity
     {
         crypt.Encrpyt(buffer.array());
         channel.write(buffer);
+    }
+    
+    
+    
+    /*
+     * Static methods
+     */
+    
+    /**
+     * Adjusts a client x and y coordinates based on their current direction
+     * @param client the client to update
+     */
+    public static void adjustPostionBasedOnDirection(Client client)
+    {
+        
+        switch (client.getDirection())
+        {
+        case 0 :
+            client.y++;
+            break;
+
+        case 1 :
+            client.y++;
+            client.x--;
+            break;
+
+        case 2 :
+            client.x--;
+            break;
+
+        case 3 :
+            client.x--;
+            client.y--;
+            break;
+
+        case 4 :
+            client.y--;
+            break;
+
+        case 5 :
+            client.y--;
+            client.x++;
+            break;
+
+        case 6 :
+            client.x++;
+            break;
+
+        case 7 :
+            client.x++;
+            client.y++;
+            break;
+        }
     }
 }
 

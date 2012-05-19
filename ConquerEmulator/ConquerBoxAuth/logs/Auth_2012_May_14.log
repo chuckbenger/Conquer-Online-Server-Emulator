@@ -1,0 +1,80 @@
+May 14, 2012 9:03:43 PM conquerboxauth.MyLogger initLog
+INFO: Log for Mon May 14 21:03:43 CDT 2012
+May 14, 2012 9:03:44 PM conquerboxauth.MyLogger appendLog
+INFO: Auth was bound to port 9958
+May 14, 2012 9:03:54 PM conquerboxauth.MyLogger appendLog
+SEVERE: java.sql.SQLException: Access denied for user 'root'@'192.168.1.103' (using password: YES)
+May 14, 2012 9:03:54 PM conquerboxauth.MyLogger appendLog
+SEVERE: Couldn't connect to the database, shutting down.
+May 14, 2012 9:05:27 PM conquerboxauth.MyLogger initLog
+INFO: Log for Mon May 14 21:05:27 CDT 2012
+May 14, 2012 9:05:27 PM conquerboxauth.MyLogger appendLog
+INFO: Auth was bound to port 9958
+May 14, 2012 9:05:37 PM conquerboxauth.MyLogger appendLog
+INFO: Login attempt from Fang => ��}�ln����� Server => �Test
+May 14, 2012 9:33:47 PM conquerboxauth.MyLogger appendLog
+INFO: Login attempt from Fang => ��}�ln����� Server => �Test
+May 14, 2012 9:34:29 PM conquerboxauth.MyLogger appendLog
+INFO: Login attempt from Fang => ��}�ln����� Server => �Test
+May 14, 2012 9:37:18 PM conquerboxauth.MyLogger appendLog
+INFO: Login attempt from Fang => ���lʀ�՚��� Server => �Test
+May 14, 2012 10:54:52 PM conquerboxauth.MyLogger appendLog
+INFO: Login attempt from Fang => ���lʀ��;KG�/� Server => Test
+May 14, 2012 11:20:25 PM conquerboxauth.MyLogger appendLog
+INFO: Login attempt from Fang => ���lʀ��;KG�/� Server => Test
+May 14, 2012 11:23:20 PM conquerboxauth.MyLogger appendLog
+INFO: Login attempt from Fang => ��}�ln�;KG�/� Server => Test
+May 14, 2012 11:31:19 PM conquerboxauth.MyLogger appendLog
+INFO: Login attempt from Fang => ���lʀ��_��� Server => �Test
+May 15, 2012 7:48:57 PM conquerboxauth.MyLogger appendLog
+INFO: Login attempt from Fang => ���lʀ��;KG�/� Server => Test
+May 15, 2012 7:55:04 PM conquerboxauth.MyLogger appendLog
+INFO: Login attempt from Fang => ���lʀ�՚��� Server => �Test
+May 15, 2012 7:57:48 PM conquerboxauth.MyLogger appendLog
+INFO: Login attempt from Fang => ���lʀ�՚��� Server => �Test
+May 15, 2012 8:17:20 PM conquerboxauth.MyLogger appendLog
+INFO: Login attempt from Fang => ���lʀ�՚��� Server => �Test
+May 15, 2012 8:18:27 PM conquerboxauth.MyLogger appendLog
+INFO: Login attempt from Fang => ���lʀ�՚��� Server => �Test
+May 15, 2012 8:18:58 PM conquerboxauth.MyLogger appendLog
+INFO: Login attempt from Fang => ���lʀ�՚��� Server => �Test
+May 15, 2012 8:20:20 PM conquerboxauth.MyLogger appendLog
+INFO: Login attempt from Fang => ���lʀ�՚��� Server => �Test
+May 15, 2012 8:20:40 PM conquerboxauth.MyLogger appendLog
+INFO: Login attempt from Fang => ���lʀ�՚��� Server => �Test
+May 15, 2012 8:31:30 PM conquerboxauth.MyLogger appendLog
+INFO: Login attempt from Fang => ���lʀ�՚��� Server => �Test
+May 15, 2012 8:32:30 PM conquerboxauth.MyLogger appendLog
+INFO: Login attempt from Fang => ��m����_��� Server => �Test
+May 15, 2012 8:37:07 PM conquerboxauth.MyLogger appendLog
+INFO: Login attempt from Fang => ��m�������� Server => �Test
+May 15, 2012 8:37:57 PM conquerboxauth.MyLogger appendLog
+INFO: Login attempt from Fang => Ë��ԅw_��� Server => �Test
+May 15, 2012 8:38:18 PM conquerboxauth.MyLogger appendLog
+INFO: Login attempt from Fang => Ë��ԅw���� Server => �Test
+May 15, 2012 8:39:06 PM conquerboxauth.MyLogger appendLog
+INFO: Login attempt from Fang => ���lʀ��_��� Server => �Test
+May 15, 2012 8:41:27 PM conquerboxauth.MyLogger appendLog
+INFO: Login attempt from Fang => ��m����_��� Server => �Test
+May 15, 2012 8:42:24 PM conquerboxauth.MyLogger appendLog
+INFO: Login attempt from Fang => \�0�"�_��� Server => �Test
+May 15, 2012 8:43:11 PM conquerboxauth.MyLogger appendLog
+INFO: Login attempt from Fang => ���lʀ��;KG�/� Server => Test
+May 15, 2012 8:45:12 PM conquerboxauth.MyLogger appendLog
+INFO: Login attempt from Fang => ���lʀ��_��� Server => �Test
+May 15, 2012 8:46:37 PM conquerboxauth.MyLogger appendLog
+INFO: Login attempt from Fang => ���lʀ�՚��� Server => �Test
+May 15, 2012 8:53:35 PM conquerboxauth.MyLogger appendLog
+INFO: Login attempt from Fang => ��}�ln�;KG�/� Server => Test
+May 15, 2012 8:54:00 PM conquerboxauth.MyLogger appendLog
+INFO: Login attempt from Fang => �w�Ub�Q ;KG�/� Server => Test
+May 15, 2012 9:15:56 PM conquerboxauth.MyLogger appendLog
+INFO: Login attempt from Fang => �w�Ub�Q ���� Server => �Test
+May 15, 2012 9:20:45 PM conquerboxauth.MyLogger appendLog
+INFO: Login attempt from Fang => �w�Ub�Q ���� Server => �Test
+May 15, 2012 9:21:11 PM conquerboxauth.MyLogger appendLog
+INFO: Login attempt from Fang => ��}�ln����� Server => �Test
+May 15, 2012 9:27:20 PM conquerboxauth.MyLogger appendLog
+INFO: Login attempt from Fang => ��JOmIs;KG�/� Server => Test
+May 15, 2012 9:28:34 PM conquerboxauth.MyLogger appendLog
+INFO: Login attempt from Fang => ��}�ln�;KG�/� Server => Test

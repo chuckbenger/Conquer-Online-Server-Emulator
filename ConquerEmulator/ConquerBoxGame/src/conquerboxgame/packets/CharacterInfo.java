@@ -90,7 +90,7 @@ public class CharacterInfo
         Packet.writeUnSignedShort(Client.getPkPoints());
         Packet.writeUnSignedByte(Client.getLevel());
         Packet.writeUnSignedByte(Client.getPlayerClass());
-        Packet.writeUnSignedByte(0);
+        Packet.writeUnSignedByte(1);
         Packet.writeUnSignedByte(Client.getReborn());
         Packet.writeUnSignedByte(1);
         Packet.writeUnSignedByte(2);

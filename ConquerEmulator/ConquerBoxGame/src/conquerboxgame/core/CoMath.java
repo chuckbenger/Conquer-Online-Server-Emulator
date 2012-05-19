@@ -15,23 +15,23 @@
  * the License.
  * ***************************************************************************
  */
-package conquerboxgame.io;
-
-import conquerboxgame.structures.ItemType;
-import java.util.HashMap;
+package conquerboxgame.core;
 
 /**
  *
  * @author chuck
  */
-public class ItemTypeReader 
+public class CoMath 
 {
-     private static HashMap<Integer, ItemType> items = new HashMap<>();
-     
-     public static void load(String path)
-     {
-         
-     }
-     
-    
+      
+    /**
+     * Gets the distance between two points
+     * @param one the first entity to check
+     * @param two the second entity to check
+     * @return returns the distance
+     */
+    public static double getDistance(Entity one, Entity two)
+    {
+        return Math.abs(Math.sqrt(Math.pow(one.getX() - two.getX(), 2) + Math.pow(one.getY() - two.getY(), 2)));
+    }
 }

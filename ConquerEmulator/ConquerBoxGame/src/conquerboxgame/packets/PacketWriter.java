@@ -2,12 +2,9 @@ package conquerboxgame.packets;
 
 //~--- non-JDK imports --------------------------------------------------------
 
+import java.nio.ByteOrder;
 import org.jboss.netty.buffer.ChannelBuffer;
 import org.jboss.netty.buffer.ChannelBuffers;
-
-//~--- JDK imports ------------------------------------------------------------
-
-import java.nio.ByteOrder;
 
 /**
  * 

@@ -24,12 +24,14 @@ package conquerboxgame.structures;
  */
 public class PacketTypes
 {
-    public static final int AUTH_MESSAGE       = 1052;
-    public static final int CHARACTER_CREATION = 1001;
-    public static final int CHARACTER_DATA     = 1006;
-    public static final int CHAT               = 1004;
-    public static final int ENTITY_MOVE        = 1005;
-    public static final int GENERAL_DATA       = 1010;
+    public static final short AUTH_MESSAGE       = 1052;
+    public static final short CHARACTER_CREATION = 1001;
+    public static final short CHARACTER_DATA     = 1006;
+    public static final short CHAT               = 1004;
+    public static final short ENTITY_MOVE        = 1005;
+    public static final short GENERAL_DATA       = 1010;
+    public static final short NPC_SPAWN          = 2030;
+    public static final short NPC_INITIAL        = 2031;
 }
 
 

@@ -118,9 +118,9 @@ public class AuthHandler extends SimpleChannelHandler implements IHandler
                 String server = reader.readString(16).trim();
 
                 //If valid forward to game server else boot them
-                if (db.isUserValid(username, "noob"))
+                if (db.isUserValid(username, "root"))
                 {
-                    byte []packet = AuthResponse.build(db.getAcctId(username), "192.168.1.103", 8080);
+                    byte []packet = AuthResponse.build(db.getAcctId(username), "127.0.0.1", 8080);
                     
                     event.getClient().getClientCryptographer().Encrypt(packet);
                     

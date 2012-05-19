@@ -26,7 +26,7 @@ import java.util.logging.Level;
 public class AuthDB
 {
     private static final String USERNAME = "root";
-    private static final String PASSWORD = "toor";
+    private static final String PASSWORD = "july301992";
     private static final String URL = "jdbc:mysql://192.168.1.100:3306/ConquerBox";
 
     private ResultSet set; //Results from a query

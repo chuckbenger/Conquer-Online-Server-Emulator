@@ -69,6 +69,8 @@ public class ConquerBoxGame
         {
             boolean testDMap = false;    // Whether you wan't a test dmap frame to show up
 
+            Kernel.init();
+            
             // Loads the dmaps into system memory
             DMapLoader.load("res/GameMaps.xml/");
             factory = new NioServerSocketChannelFactory(Executors.newCachedThreadPool(),
@@ -92,6 +94,7 @@ public class ConquerBoxGame
             CHANNEL_GROUP.add(server);
             MyLogger.appendLog(Level.INFO, "Game was bound to port " + Kernel.PORT);
 
+            
             if (testDMap)
             {
                 DmapFrame frame = new DmapFrame();
@@ -108,6 +111,16 @@ public class ConquerBoxGame
         {
             MyLogger.appendException(ex.getStackTrace(), ex.getMessage());
         }
+    }
+    
+    
+    public static void dump(byte []packet)
+    {
+        for(byte b : packet)
+        {
+            System.out.print(" " + (b & 0xFF));
+        }
+        System.out.println("\n" + new String(packet));
     }
 }
 

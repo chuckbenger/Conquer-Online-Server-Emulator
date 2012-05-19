@@ -13,6 +13,11 @@
         </data>
         <spellchecker-wordlist xmlns="http://www.netbeans.org/ns/spellchecker-wordlist/1">
             <word>imediatly</word>
+            <word>npc</word>
+            <word>npc's</word>
+            <word>uid</word>
+            <word>uint</word>
+            <word>ushort</word>
         </spellchecker-wordlist>
     </configuration>
 </project>

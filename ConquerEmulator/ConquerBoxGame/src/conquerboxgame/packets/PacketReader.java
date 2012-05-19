@@ -15,22 +15,34 @@
  * the License.
  * ***************************************************************************
  */
-package conquerboxgame.structures;
+package conquerboxgame.packets;
+
+import org.jboss.netty.buffer.ChannelBuffer;
 
 /**
  *
  * @author chuck
  */
-public class ItemType 
+public class PacketReader 
 {
-
-            public String Name;
-            public String Description;
-            public int ID;
-            public int Price;
-            public short Class, Prof, Level, Str_Req, Dex_Req, Vit_Req,
-                Spi_Req, Damage_Max, Damage_Min, Defense_Add, Dex_Add, Dodge_Add,
-                HP_Add, MP_Add, Magic_Attack, MDefense_Add, Dura, MaxDura, Frequency;
-            public byte Range, TradeType;
-
+    
+    /**
+     * Reads a string from a channel buffer of the specified length
+     * @param buffer the buffer to read from
+     * @param length the number of bytes to read
+     * @return returns the bytes as a string
+     */
+    public static String readStringFromBuffer(ChannelBuffer buffer, int length)
+    {
+        
+        //Make sure we have enough bytes to read
+        if(buffer.readerIndex() + length > buffer.capacity())
+            return null;
+        
+        byte[] data = new byte[length];
+        
+        buffer.readBytes(data, 0, data.length);
+        
+        return new String(data);
+    }
 }

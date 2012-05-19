@@ -21,6 +21,8 @@ import conquerboxgame.MyLogger;
 import conquerboxgame.database.Database;
 import conquerboxgame.net.PacketHandler;
 import conquerboxgame.net.ServerDataEvent;
+import conquerboxgame.structures.NPC;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.logging.Level;
 import org.jboss.netty.channel.Channel;
@@ -42,12 +44,16 @@ public class Kernel
     public static final Worker[] WORKERS  = new Worker[NUM_WORKERS]; //Worker threads
     public static final Database DATABASE = new Database();
     
+    //Holds all npc's for each map
+    public static final HashMap<Integer,ArrayList<NPC>> NPC_MAP = new HashMap<>();
+    
     
     //Non constant primitives
     private static byte currentWorker = 0; //Current thread to offload to
     
-    static
+    public static void init()
     {
+
          //Create and start each worker thread
         for(int i = 0; i < WORKERS.length; i++)
         {
@@ -60,6 +66,13 @@ public class Kernel
         if(!DATABASE.connect())
         {
             MyLogger.appendLog(Level.SEVERE, "Failed to connect to database. Shutting down");
+            killAllWorkers();
+            System.exit(-1);
+        }
+       
+        if(!DATABASE.loadNPCData(NPC_MAP))
+        {
+            MyLogger.appendLog(Level.SEVERE, "Failed to load npc data. shutting down");
             killAllWorkers();
             System.exit(-1);
         }
