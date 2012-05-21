@@ -23,10 +23,16 @@ package conquerboxgame.core;
 //~--- non-JDK imports --------------------------------------------------------
 
 import conquerboxgame.crypto.Cryptographer;
+import conquerboxgame.packets.GeneralUpdate;
+import conquerboxgame.packets.npc.SpawnNpc;
+import conquerboxgame.structures.GeneralTypes;
+import conquerboxgame.structures.Locations;
 import conquerboxgame.structures.NPC;
+import conquerboxgame.structures.Rules;
 import java.util.ArrayList;
 import org.jboss.netty.buffer.ChannelBuffer;
 import org.jboss.netty.channel.Channel;
+import conquerboxgame.structures.Locations.TeleportLocation;
 
 /**
  *
@@ -57,6 +63,8 @@ public class Client extends Entity
     private int           prevX;
     private int           prevY;
     private int           map;
+    private long          lastNpcID; //The id of the last npc the client interacted with
+    private int           prevMap;
     
     private ArrayList<NPC> myNpcs = new ArrayList<>(); //Npcs currently on the clients screen
 
@@ -72,6 +80,17 @@ public class Client extends Entity
 
     // <editor-fold defaultstate="collapsed" desc="Getters">
 
+    public int getPrevMap()
+    {
+        return prevMap;
+    }
+
+    
+    public long getLastNpcID() {
+        return lastNpcID;
+    }
+
+    
      public int getPrevX()
     {
         return prevX;
@@ -191,13 +210,19 @@ public class Client extends Entity
         return myNpcs;
     }
 
+    public void setLastNpcID(long lastNpcID) {
+        this.lastNpcID = lastNpcID;
+    }
+
     
     // </editor-fold>
 
     // <editor-fold defaultstate="collapsed" desc="Setters">
 
+    
     public void setMap(int map)
     {
+        prevMap = this.map;
         this.map = map;
     }
 
@@ -379,6 +404,35 @@ public class Client extends Entity
             client.y++;
             break;
         }
+    }
+    
+     /**
+     * Spawns npc's that are within the clients view
+     * @param client the client to spawn them for
+     */
+    public static void spawnNpcs(Client client)
+    {
+         ArrayList<NPC> npcs = Kernel.NPC_MAP.get(client.getMap());
+         for(NPC npc : npcs)
+         {
+             if(!client.getMyNpcs().contains(npc))
+             {
+                if(CoMath.getDistance(npc, client) < Rules.DISTANCE_RENDER)
+                {
+                    client.getMyNpcs().add(npc);
+                    client.send(SpawnNpc.build(npc.getId(),  npc.getX(),npc.getY(),npc.getType(), npc.getDirection() , npc.getInteraction()));
+                }
+            }
+         }
+    }
+    
+    public static void teleport(Client client,TeleportLocation location)
+    {
+        client.setX(location.X);
+        client.setY(location.Y);
+        client.setMap(location.MAP);
+        client.send(GeneralUpdate.build(client.getCharacterId(), client.getX(), client.getY(), 0, 0,client.getMap(), 0, GeneralTypes.POS_REQUEST));
+        client.getMyNpcs().clear();
     }
 }
 

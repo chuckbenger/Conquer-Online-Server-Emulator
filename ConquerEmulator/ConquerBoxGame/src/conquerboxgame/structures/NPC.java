@@ -59,4 +59,5 @@ public class NPC extends Entity
     public String toString() {
         return "NPC{" + "type=" + type + ", interaction=" + interaction + '}' + super.toString();
     }  
+   
 }

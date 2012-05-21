@@ -19,13 +19,15 @@ package conquerboxgame.core;
 
 import conquerboxgame.MyLogger;
 import conquerboxgame.database.Database;
-import conquerboxgame.net.PacketHandler;
+import conquerboxgame.net.handlers.PacketHandler;
 import conquerboxgame.net.ServerDataEvent;
+import conquerboxgame.structures.Locations;
 import conquerboxgame.structures.NPC;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.logging.Level;
 import org.jboss.netty.channel.Channel;
+import conquerboxgame.structures.Locations.PortalLocation;
 
 /**
  * Kernel is the Main class that contains most of the game server data objects
@@ -46,7 +48,7 @@ public class Kernel
     
     //Holds all npc's for each map
     public static final HashMap<Integer,ArrayList<NPC>> NPC_MAP = new HashMap<>();
-    
+    public static final HashMap<Integer,ArrayList<PortalLocation>> PORTALS = new HashMap<>();
     
     //Non constant primitives
     private static byte currentWorker = 0; //Current thread to offload to
@@ -76,6 +78,9 @@ public class Kernel
             killAllWorkers();
             System.exit(-1);
         }
+        
+        //Load all the portal locations
+        Locations.loadPortals(PORTALS);
     }
     
     

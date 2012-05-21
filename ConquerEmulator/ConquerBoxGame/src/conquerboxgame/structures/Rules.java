@@ -25,4 +25,5 @@ package conquerboxgame.structures;
 public class Rules 
 {
     public static final byte DISTANCE_RENDER = 20; //how close the client must be to a entity to spawn it
+    public static final short PORTAL_SIZE    = 20;//The range the client has to be in to trigger a portal
 }

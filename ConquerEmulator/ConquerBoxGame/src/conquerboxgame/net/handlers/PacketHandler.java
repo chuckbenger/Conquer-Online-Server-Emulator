@@ -18,7 +18,7 @@
 
 
 
-package conquerboxgame.net;
+package conquerboxgame.net.handlers;
 
 //~--- non-JDK imports --------------------------------------------------------
 
@@ -31,8 +31,10 @@ import conquerboxgame.core.IHandler;
 import conquerboxgame.core.Kernel;
 
 import conquerboxgame.database.Database;
+import conquerboxgame.net.ServerDataEvent;
 
 import conquerboxgame.packets.*;
+import conquerboxgame.packets.npc.NpcCommand;
 
 import conquerboxgame.structures.*;
 
@@ -60,6 +62,7 @@ public class PacketHandler implements IHandler
     public void handle(ServerDataEvent event)
     {
         long   id;
+        long   timer;
         String response;
         Client client = event.getClient();
 
@@ -164,7 +167,7 @@ public class PacketHandler implements IHandler
          * General data that is requested from the client.
          */
         case PacketTypes.GENERAL_DATA :
-            handleGeneralPacket(client, buffer);
+            GeneralHandler.handleGeneralPacket(client, buffer);
 
             break;
 
@@ -189,161 +192,32 @@ public class PacketHandler implements IHandler
             break;
 
         case PacketTypes.CHAT :
-            handleChat(client, buffer);
+            ChatHandler.handleChat(client, buffer);
             break;
 
         case PacketTypes.NPC_INITIAL:
-            conquerboxgame.ConquerBoxGame.dump(buffer.array());
+            id = buffer.readUnsignedInt();
+            NpcCommand.handleDialog(client, id, (byte)0);
             break;
+            
+        case PacketTypes.NPC_COMMAND:
+            timer = buffer.readUnsignedInt();
+            buffer.readerIndex(10); //Link id is at index 10
+            short linkID = buffer.readUnsignedByte();
+            
+            //If the no link back was set for this packet don't handle it
+            if(linkID == NpcCommand.NO_LINK_BACK)
+                break;
+            
+            //Pass in 0 as npc id because the npc id was recorded from last interaction
+            NpcCommand.handleDialog(client, 0, (byte)(linkID & 0xFF));
+           
+            break;
+            
         default :
             MyLogger.appendLog(Level.INFO, "Unkown packet type => " + type);
-
             break;
         }
-    }
-
-    /**
-     * Handles general packet types
-     * @param client the client
-     * @param buffer the buffer holding the packet
-     */
-    private void handleGeneralPacket(Client client, ChannelBuffer buffer)
-    {
-        long timer = buffer.readInt();
-        long other = System.currentTimeMillis() / 10000L;
-        long id    = buffer.readInt();
-        int  x;
-        int  y;
-
-        buffer.readerIndex(24);
-
-        int subtype = buffer.readInt();
-
-        switch (subtype)
-        {
-        /**
-         * Request the clients position
-         */
-        case GeneralTypes.POS_REQUEST :
-            client.send(GeneralUpdate.build(client.getCharacterId(), client.getX(), client.getY(), 0, 0,
-                                            client.getMap(), 0, GeneralTypes.POS_REQUEST));
-           
-
-            break;
-
-        case GeneralTypes.AVATAR :
-            if (id == client.getCharacterId())
-            {
-                buffer.readerIndex(20);
-                client.setX(buffer.readUnsignedShort());
-                client.setY(buffer.readUnsignedShort());
-                client.send(GeneralUpdate.build(client.getCharacterId(), client.getX(), client.getY(), 0, 0,0, 0, GeneralTypes.AVATAR));
-                spawnNpcs(client);
-            }
-
-            break;
-
-            
-        case GeneralTypes.RETRIEVE_SURROUNDINGS:
-             //client.send(SpawnNpc.build(1, client.getX(),client.getY(), 10, 1, 2));
-         
-            spawnNpcs(client);
-            break;
-        default :
-            MyLogger.appendLog(Level.INFO, "Unkown packet subtype => " + subtype);
-            break;
-        }
-    }
-
-    /**
-     * Handles chat packets sent from the client
-     * @param client the client
-     * @param buffer the buffer holding the packet
-     */
-    private void handleChat(Client client, ChannelBuffer buffer)
-    {
-        buffer.readerIndex(4);
-
-        byte   toLength;         // The length of the destination name
-        byte   stringCount;      // Total number of strings
-        byte   suffixLength;     // Length of the suffix
-        byte   messageLength;    // The length of the message
-        byte   fromLength;       // THe length of the from string
-        String from;             // The person that sent the packet
-        String to;               // Who the packet is for
-        String message;          // The actual message
-        String suffix;//The message suffix
-        long   chatColor = buffer.readUnsignedInt();
-        long   chatType  = buffer.readUnsignedInt();
-
-        long id = buffer.readUnsignedInt();    // Chat id
-        id++;
-        
-        stringCount = buffer.readByte();
-        
-        //Make sure theres a string
-        if (stringCount == 0)
-            return;
-        
-        //Read the sender information
-        fromLength = buffer.readByte();
-        from = PacketReader.readStringFromBuffer(buffer, fromLength);
-        if(from == null)
-            return;
-        
-        //Read the destination field
-        toLength = buffer.readByte();
-        to = PacketReader.readStringFromBuffer(buffer, toLength);
-        if(to == null)
-            return;
-        
-        //Read the suffix
-        suffixLength = buffer.readByte();
-        suffix = PacketReader.readStringFromBuffer(buffer, suffixLength);
-        if(suffix == null)
-            return;
-        
-        //Read the actual message
-        messageLength = buffer.readByte();
-        message = PacketReader.readStringFromBuffer(buffer, messageLength);
-        if(message == null)
-            return;
-        
-        if(message.contains("dc"))
-            client.getChannel().disconnect();
-      
-        
-        
-        
-        switch((int)chatType)
-        {
-            case ChatTypes.TALK:
-                //conquerboxgame.ConquerBoxGame.dump(buffer.array());
-               // client.send(Chat.build(chatColor,id, ChatTypes.TALK,from , to, suffix, message));
-                break;
-        }
-    }
-    
-    /**
-     * Spawns npc's that are within the clients view
-     * @param client the client to spawn them for
-     */
-    private void spawnNpcs(Client client)
-    {
-         ArrayList<NPC> npcs = Kernel.NPC_MAP.get(client.getMap());
-         for(NPC npc : npcs)
-         {
-             if(!client.getMyNpcs().contains(npc))
-             {
-                if(CoMath.getDistance(npc, client) < Rules.DISTANCE_RENDER)
-                {
-                    client.getMyNpcs().add(npc);
-                    client.send(SpawnNpc.build(npc.getId(),  npc.getX(),npc.getY(),npc.getType(), npc.getDirection() , npc.getInteraction()));
-                }
-            }
-         }
     }
 }
 
-
-//~ Formatted by Jindent --- http://www.jindent.com

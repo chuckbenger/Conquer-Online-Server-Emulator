@@ -53,7 +53,7 @@ public class GeneralTypes
     public static final short NINJASTEP              = 156;
     public static final short OPEN_SHOP              = 113;
     public static final short PICKUP_CASH_EFFECT     = 121;
-    public static final short PORTAL                 = 85;
+    public static final short PORTAL                 = 130;
     public static final short POS_REQUEST            = 137;
     public static final short REMOTE_COMMANDS        = 116;
     public static final short REMOVE_WEAPON_MESH     = 135;
