@@ -23,7 +23,7 @@ import java.util.HashMap;
 import java.util.logging.Level;
 
 /**
- *
+ * Locations holds enums for teleport locations, portal locations, map id's
  * @author chuck
  */
 public class Locations 
@@ -32,26 +32,32 @@ public class Locations
     
     public static enum TeleportLocation
     {
-        TWIN_CITY_TO_APE(1002, 555, 958),
-        TWIN_CITY_TO_BIRD(1002, 229, 197),
-        TWIN_CITY_TO_NIX(1002, 956, 555),
-        TWIN_CITY_TO_DESERT(1002, 67, 463),
-        BIRD_FROM_TWIN_CITY(1015,1014,713),
-        NIX_FROM_TWIN_CITY(1011,9,376),
-        APE_FROM_TWIN_CITY(1020, 377,11),
-        DESERT_FROM_TWIN_CITY(1000, 974,669),
-        NIX_SPAWN(1011,190,271),
-        BIRD_SPAWN(1015,716,575),
-        APE_SPAWN(1020,566,566),
-        DESERT_SPAWN(1000, 496, 641),
-        TWIN_CITY_SPAWN(1002,427,378),
-        MARKET(1036, 292, 236);
+        TWIN_CITY_TO_APE(Map.TWIN_CITY, 555, 958),
+        TWIN_CITY_TO_BIRD(Map.TWIN_CITY, 229, 197),
+        TWIN_CITY_TO_NIX(Map.TWIN_CITY, 956, 555),
+        TWIN_CITY_TO_DESERT(Map.TWIN_CITY, 67, 463),
+        BIRD_FROM_TWIN_CITY(Map.BIRD_ISLAND,1014,713),
+        NIX_FROM_TWIN_CITY(Map.PHOENIX_CASTLE,9,376),
+        APE_FROM_TWIN_CITY(Map.APE_MOUNTAIN, 377,11),
+        DESERT_FROM_TWIN_CITY(Map.DESERT_CITY, 974,669),
+        NIX_SPAWN(Map.PHOENIX_CASTLE,190,271),
+        BIRD_SPAWN(Map.BIRD_ISLAND,716,575),
+        APE_SPAWN(Map.APE_MOUNTAIN,566,566),
+        DESERT_SPAWN(Map.DESERT_CITY, 496, 641),
+        TWIN_CITY_SPAWN(Map.TWIN_CITY,427,378),
+        MARKET(Map.MARKET, 292, 236);
        
-        public final int MAP;
-        public final int X;
-        public final int Y;
+        public final Map MAP; //The map to teleport to
+        public final int X; //the x position to teleport to
+        public final int Y; //The y position to teleport to
 
-        private TeleportLocation(int MAP, int X, int Y)
+        /**
+         * Creates a new teleport location based on input parameters
+         * @param MAP The map to teleport to 
+         * @param X the x position to teleport to
+         * @param Y The y position to teleport to
+         */
+        private TeleportLocation(Map MAP, int X, int Y)
         {
             this.MAP = MAP;
             this.X = X;
@@ -60,22 +66,32 @@ public class Locations
 
     }
     
+    /**
+     * Holds game portal locations
+     */
     public static enum PortalLocation
     {
-        TWIN_CITY_BIRD(TeleportLocation.BIRD_FROM_TWIN_CITY, 220,195,1002),
-        BIRD_TWIN_CITY(TeleportLocation.TWIN_CITY_TO_BIRD, 1014,713,1015),
-        TWIN_CITY_NIX(TeleportLocation.NIX_FROM_TWIN_CITY, 961,559,1002),
-        NIX_TWIN_CITY(TeleportLocation.TWIN_CITY_TO_NIX, 9, 376,1011),
-        TWIN_CITY_APE(TeleportLocation.APE_FROM_TWIN_CITY,557,962,1002),
-        APE_TWIN_CITY(TeleportLocation.TWIN_CITY_TO_APE, 377, 11, 1020),
-        DESERT_TWIN_CITY(TeleportLocation.TWIN_CITY_TO_DESERT, 974, 669, 1000);
+        TWIN_CITY_TO_BIRD(TeleportLocation.BIRD_FROM_TWIN_CITY, 220,195,Map.TWIN_CITY),
+        BIRD_TO_TWIN_CITY(TeleportLocation.TWIN_CITY_TO_BIRD, 1014,713,Map.BIRD_ISLAND),
+        TWIN_CITY_TO_NIX(TeleportLocation.NIX_FROM_TWIN_CITY, 961,559,Map.TWIN_CITY),
+        NIX_TO_TWIN_CITY(TeleportLocation.NIX_FROM_TWIN_CITY, 9, 376,Map.PHOENIX_CASTLE),
+        TWIN_CITY_TO_APE(TeleportLocation.APE_FROM_TWIN_CITY,557,962,Map.TWIN_CITY),
+        APE_TO_TWIN_CITY(TeleportLocation.TWIN_CITY_TO_APE, 377, 11, Map.APE_MOUNTAIN),
+        DESERT_TO_TWIN_CITY(TeleportLocation.TWIN_CITY_TO_DESERT, 974, 669, Map.DESERT_CITY);
         
-        public final TeleportLocation location;
-        public final int portalX;
-        public final int portalY;
-        public final int portalMap;
+        public final TeleportLocation location; //The location the portal teleports to
+        public final int portalX; //The portals general x position
+        public final int portalY; //The portals general y position
+        public final Map portalMap; //The map the port is on
 
-        private PortalLocation(TeleportLocation location, int portalX, int portalY, int portalMap) 
+        /**
+         * Creates a new portal location in the input location
+         * @param location the location the portal teleports to
+         * @param portalX the general x position of the portal
+         * @param portalY the general y position of the portal
+         * @param portalMap the portal map
+         */
+        private PortalLocation(TeleportLocation location, int portalX, int portalY, Map portalMap) 
         {
             this.location = location;
             this.portalX = portalX;
@@ -84,6 +100,31 @@ public class Locations
         }
     }
 
+    /**
+     * Holds enumerated aliases for conquer map id's
+     */
+    public static enum Map
+    {
+        
+        TWIN_CITY(1002),
+        DESERT_CITY(1000),
+        BIRD_ISLAND(1015),
+        PHOENIX_CASTLE(1011),
+        APE_MOUNTAIN(1020),
+        MARKET(1036);
+        
+        //The id of the map
+        public final int MAP_ID;
+
+        /**
+         * Sets the map id for the enum entry
+         * @param MAP the maps id
+         */
+        private Map(int MAP)
+        {
+            this.MAP_ID = MAP;
+        }
+    }
    
     /**
      * Loads all the game portals in the hash map 
@@ -93,12 +134,12 @@ public class Locations
     {
         for(PortalLocation portal : PortalLocation.values())
         {
-            ArrayList<PortalLocation> portalList = portals.get(portal.portalMap);
+            ArrayList<PortalLocation> portalList = portals.get(portal.portalMap.MAP_ID);
             
             if(portalList == null)
             {
                 portalList = new ArrayList<>();
-                portals.put(portal.portalMap, portalList);
+                portals.put(portal.portalMap.MAP_ID, portalList);
             }
             
             portalList.add(portal);

@@ -33,6 +33,7 @@ public class PacketTypes
     public static final short NPC_SPAWN          = 2030;
     public static final short NPC_INITIAL        = 2031;
     public static final short NPC_COMMAND        = 2032;
+    public static final short ITEM_USAGE         = 1009;
 }
 
 

@@ -1,13 +1,11 @@
 package conquerboxgame;
 
+import conquerboxgame.core.Kernel;
 import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.logging.FileHandler;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import java.util.logging.SimpleFormatter;
+import java.util.logging.*;
 
 /**
  * **********************************************************************
@@ -36,6 +34,7 @@ public class MyLogger
     private static final Logger LOGGER = Logger.getLogger("LOG");
     private static FileHandler fileHandler;
 
+    
     /**
      * Sets up the log to output to a file for the current date
      */
@@ -43,6 +42,7 @@ public class MyLogger
     {
         try
         {
+            LOGGER.setUseParentHandlers(false);
             File logDir = new File("logs/");
 
             if (!logDir.exists())
@@ -58,6 +58,7 @@ public class MyLogger
             SimpleFormatter formatter = new SimpleFormatter();
             fileHandler.setFormatter(formatter);
             LOGGER.log(Level.INFO, "Log for {0}", now.toString());
+           
         } catch (IOException e)
         {
             e.printStackTrace();
@@ -73,6 +74,7 @@ public class MyLogger
     public static void appendLog(Level level, String text)
     {
         LOGGER.log(level, text);
+        System.out.println(Kernel.NAME + text);
     }
     
     public static void appendException(StackTraceElement[] e, String title)
@@ -81,6 +83,7 @@ public class MyLogger
         for(StackTraceElement s : e)
             total += s.toString() + "\n";
         
+        System.out.println(total);
         appendLog(Level.SEVERE, total);
     }
 }

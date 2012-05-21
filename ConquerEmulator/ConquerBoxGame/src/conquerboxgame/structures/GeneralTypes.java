@@ -68,6 +68,7 @@ public class GeneralTypes
     public static final short SPAWN_EFFECT           = 131;
     public static final short STOP_FLYING            = 120;
     public static final short REMOVE_ENTITY          = 141;
+    public static final short WHARE_HOUSE            = 186;
 }
 
 

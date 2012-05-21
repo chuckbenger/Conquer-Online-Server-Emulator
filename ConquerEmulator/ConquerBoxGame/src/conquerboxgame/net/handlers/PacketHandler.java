@@ -22,15 +22,12 @@ package conquerboxgame.net.handlers;
 
 //~--- non-JDK imports --------------------------------------------------------
 
-import conquerboxgame.packets.npc.SpawnNpc;
 import conquerboxgame.MyLogger;
 
 import conquerboxgame.core.Client;
-import conquerboxgame.core.CoMath;
 import conquerboxgame.core.IHandler;
 import conquerboxgame.core.Kernel;
 
-import conquerboxgame.database.Database;
 import conquerboxgame.net.ServerDataEvent;
 
 import conquerboxgame.packets.*;
@@ -44,7 +41,6 @@ import org.jboss.netty.buffer.ChannelBuffers;
 //~--- JDK imports ------------------------------------------------------------
 
 import java.nio.ByteOrder;
-import java.util.ArrayList;
 
 import java.util.logging.Level;
 
@@ -211,7 +207,10 @@ public class PacketHandler implements IHandler
             
             //Pass in 0 as npc id because the npc id was recorded from last interaction
             NpcCommand.handleDialog(client, 0, (byte)(linkID & 0xFF));
-           
+            break;
+            
+        case PacketTypes.ITEM_USAGE:
+            ItemUsageHandler.handleItemUsage(client, buffer);
             break;
             
         default :

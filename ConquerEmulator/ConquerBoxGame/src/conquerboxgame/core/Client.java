@@ -430,7 +430,7 @@ public class Client extends Entity
     {
         client.setX(location.X);
         client.setY(location.Y);
-        client.setMap(location.MAP);
+        client.setMap(location.MAP.MAP_ID);
         client.send(GeneralUpdate.build(client.getCharacterId(), client.getX(), client.getY(), 0, 0,client.getMap(), 0, GeneralTypes.POS_REQUEST));
         client.getMyNpcs().clear();
     }

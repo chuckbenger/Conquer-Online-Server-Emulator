@@ -1,0 +1,496 @@
+May 21, 2012 10:09:14 AM conquerboxgame.MyLogger initLog
+INFO: Log for Mon May 21 10:09:13 CDT 2012
+May 21, 2012 10:09:14 AM conquerboxgame.MyLogger appendLog
+INFO: Loaded NPC'S in 42 ms
+May 21, 2012 10:09:14 AM conquerboxgame.MyLogger appendLog
+INFO: Loaded portal locations!
+May 21, 2012 10:09:16 AM conquerboxgame.MyLogger appendLog
+INFO: Loaded DMaps in 1758 ms
+May 21, 2012 10:09:16 AM conquerboxgame.MyLogger appendLog
+INFO: Game was bound to port 8080
+May 21, 2012 10:09:33 AM conquerboxgame.MyLogger initLog
+INFO: Log for Mon May 21 10:09:33 CDT 2012
+May 21, 2012 10:09:33 AM conquerboxgame.MyLogger appendLog
+INFO: Loaded NPC'S in 39 ms
+May 21, 2012 10:09:33 AM conquerboxgame.MyLogger appendLog
+INFO: Loaded portal locations!
+May 21, 2012 10:09:35 AM conquerboxgame.MyLogger appendLog
+INFO: Loaded DMaps in 1915 ms
+May 21, 2012 10:09:35 AM conquerboxgame.MyLogger appendLog
+INFO: Game was bound to port 8080
+May 21, 2012 10:11:27 AM conquerboxgame.MyLogger initLog
+INFO: Log for Mon May 21 10:11:27 CDT 2012
+May 21, 2012 10:11:28 AM conquerboxgame.MyLogger appendLog
+INFO: Loaded NPC'S in 47 ms
+May 21, 2012 10:11:28 AM conquerboxgame.MyLogger appendLog
+INFO: Loaded portal locations!
+May 21, 2012 10:11:30 AM conquerboxgame.MyLogger appendLog
+INFO: Loaded DMaps in 2168 ms
+May 21, 2012 10:11:30 AM conquerboxgame.MyLogger appendLog
+INFO: Game was bound to port 8080
+May 21, 2012 10:12:10 AM conquerboxgame.MyLogger initLog
+INFO: Log for Mon May 21 10:12:10 CDT 2012
+May 21, 2012 10:12:10 AM conquerboxgame.MyLogger appendLog
+INFO: Loaded NPC'S in 41 ms
+May 21, 2012 10:12:10 AM conquerboxgame.MyLogger appendLog
+INFO: Loaded portal locations!
+May 21, 2012 10:12:12 AM conquerboxgame.MyLogger appendLog
+INFO: Loaded DMaps in 2042 ms
+May 21, 2012 10:12:13 AM conquerboxgame.MyLogger appendLog
+INFO: Game was bound to port 8080
+May 21, 2012 10:12:15 AM conquerboxgame.MyLogger appendLog
+INFO: Client has connected! => /127.0.0.1:60156
+May 21, 2012 10:12:25 AM conquerboxgame.MyLogger appendLog
+INFO: Unkown packet type => 1009
+May 21, 2012 10:12:35 AM conquerboxgame.MyLogger appendLog
+INFO: Unkown packet type => 1009
+May 21, 2012 10:12:45 AM conquerboxgame.MyLogger appendLog
+INFO: Unkown packet type => 1009
+May 21, 2012 10:12:55 AM conquerboxgame.MyLogger appendLog
+INFO: Unkown packet type => 1009
+May 21, 2012 10:13:05 AM conquerboxgame.MyLogger appendLog
+INFO: Unkown packet type => 1009
+May 21, 2012 10:13:25 AM conquerboxgame.MyLogger appendLog
+INFO: Unkown packet type => 1009
+May 21, 2012 10:13:35 AM conquerboxgame.MyLogger appendLog
+INFO: Unkown packet type => 1009
+May 21, 2012 10:13:45 AM conquerboxgame.MyLogger appendLog
+INFO: Unkown packet type => 1009
+May 21, 2012 10:13:55 AM conquerboxgame.MyLogger appendLog
+INFO: Unkown packet type => 1009
+May 21, 2012 10:14:05 AM conquerboxgame.MyLogger appendLog
+INFO: Unkown packet type => 1009
+May 21, 2012 10:14:15 AM conquerboxgame.MyLogger appendLog
+INFO: Unkown packet type => 1009
+May 21, 2012 10:14:25 AM conquerboxgame.MyLogger appendLog
+INFO: Unkown packet type => 1009
+May 21, 2012 10:14:35 AM conquerboxgame.MyLogger appendLog
+INFO: Unkown packet type => 1009
+May 21, 2012 10:14:45 AM conquerboxgame.MyLogger appendLog
+INFO: Unkown packet type => 1009
+May 21, 2012 10:14:55 AM conquerboxgame.MyLogger appendLog
+INFO: Unkown packet type => 1009
+May 21, 2012 10:15:05 AM conquerboxgame.MyLogger appendLog
+INFO: Unkown packet type => 1009
+May 21, 2012 10:15:11 AM conquerboxgame.MyLogger initLog
+INFO: Log for Mon May 21 10:15:10 CDT 2012
+May 21, 2012 10:15:11 AM conquerboxgame.MyLogger appendLog
+INFO: Loaded NPC'S in 55 ms
+May 21, 2012 10:15:11 AM conquerboxgame.MyLogger appendLog
+INFO: Loaded portal locations!
+May 21, 2012 10:15:13 AM conquerboxgame.MyLogger appendLog
+INFO: Loaded DMaps in 2152 ms
+May 21, 2012 10:15:13 AM conquerboxgame.MyLogger appendLog
+INFO: Game was bound to port 8080
+May 21, 2012 10:15:14 AM conquerboxgame.MyLogger appendLog
+INFO: Client has connected! => /127.0.0.1:60238
+May 21, 2012 10:15:43 AM conquerboxgame.MyLogger appendLog
+INFO: Client has connected! => /127.0.0.1:60247
+May 21, 2012 10:16:04 AM conquerboxgame.MyLogger appendLog
+INFO: Unkown packet type => 1009
+May 21, 2012 10:16:26 AM conquerboxgame.MyLogger appendLog
+INFO: Unkown packet type => 1009
+May 21, 2012 10:16:53 AM conquerboxgame.MyLogger appendLog
+INFO: Unkown packet type => 1009
+May 21, 2012 10:17:03 AM conquerboxgame.MyLogger appendLog
+INFO: Unkown packet type => 1009
+May 21, 2012 10:17:13 AM conquerboxgame.MyLogger appendLog
+INFO: Unkown packet type => 1009
+May 21, 2012 10:17:23 AM conquerboxgame.MyLogger appendLog
+INFO: Unkown packet type => 1009
+May 21, 2012 10:17:32 AM conquerboxgame.MyLogger initLog
+INFO: Log for Mon May 21 10:17:32 CDT 2012
+May 21, 2012 10:17:33 AM conquerboxgame.MyLogger appendLog
+INFO: Loaded NPC'S in 82 ms
+May 21, 2012 10:17:33 AM conquerboxgame.MyLogger appendLog
+INFO: Loaded portal locations!
+May 21, 2012 10:17:35 AM conquerboxgame.MyLogger appendLog
+INFO: Loaded DMaps in 2567 ms
+May 21, 2012 10:17:35 AM conquerboxgame.MyLogger appendLog
+INFO: Game was bound to port 8080
+May 21, 2012 10:17:36 AM conquerboxgame.MyLogger appendLog
+INFO: Client has connected! => /127.0.0.1:60255
+May 21, 2012 10:17:50 AM conquerboxgame.MyLogger appendLog
+INFO: Unkown packet type => 1009
+May 21, 2012 10:18:08 AM conquerboxgame.MyLogger initLog
+INFO: Log for Mon May 21 10:18:08 CDT 2012
+May 21, 2012 10:18:09 AM conquerboxgame.MyLogger appendLog
+INFO: Loaded NPC'S in 40 ms
+May 21, 2012 10:18:09 AM conquerboxgame.MyLogger appendLog
+INFO: Loaded portal locations!
+May 21, 2012 10:18:10 AM conquerboxgame.MyLogger appendLog
+INFO: Loaded DMaps in 1836 ms
+May 21, 2012 10:18:11 AM conquerboxgame.MyLogger appendLog
+INFO: Game was bound to port 8080
+May 21, 2012 10:18:12 AM conquerboxgame.MyLogger appendLog
+INFO: Client has connected! => /127.0.0.1:60267
+May 21, 2012 10:19:16 AM conquerboxgame.MyLogger initLog
+INFO: Log for Mon May 21 10:19:16 CDT 2012
+May 21, 2012 10:19:17 AM conquerboxgame.MyLogger appendLog
+INFO: Loaded NPC'S in 48 ms
+May 21, 2012 10:19:17 AM conquerboxgame.MyLogger appendLog
+INFO: Loaded portal locations!
+May 21, 2012 10:19:19 AM conquerboxgame.MyLogger appendLog
+INFO: Loaded DMaps in 2399 ms
+May 21, 2012 10:19:20 AM conquerboxgame.MyLogger appendLog
+INFO: Game was bound to port 8080
+May 21, 2012 10:19:22 AM conquerboxgame.MyLogger appendLog
+INFO: Client has connected! => /127.0.0.1:60277
+May 21, 2012 10:19:56 AM conquerboxgame.MyLogger appendLog
+INFO: Unkown packet type => 1009
+May 21, 2012 10:26:18 AM conquerboxgame.MyLogger appendLog
+INFO: Client has connected! => /127.0.0.1:60359
+May 21, 2012 10:26:28 AM conquerboxgame.MyLogger initLog
+INFO: Log for Mon May 21 10:26:28 CDT 2012
+May 21, 2012 10:26:28 AM conquerboxgame.MyLogger appendLog
+INFO: Loaded NPC'S in 46 ms
+May 21, 2012 10:26:28 AM conquerboxgame.MyLogger appendLog
+INFO: Loaded portal locations!
+May 21, 2012 10:26:30 AM conquerboxgame.MyLogger appendLog
+INFO: Loaded DMaps in 1839 ms
+May 21, 2012 10:26:30 AM conquerboxgame.MyLogger appendLog
+INFO: Game was bound to port 8080
+May 21, 2012 10:26:31 AM conquerboxgame.MyLogger appendLog
+INFO: Client has connected! => /127.0.0.1:60371
+May 21, 2012 10:26:41 AM conquerboxgame.MyLogger appendLog
+INFO: Unkown packet type => 1009
+May 21, 2012 10:26:51 AM conquerboxgame.MyLogger appendLog
+INFO: Unkown packet type => 1009
+May 21, 2012 10:27:01 AM conquerboxgame.MyLogger appendLog
+INFO: Unkown packet type => 1009
+May 21, 2012 10:27:11 AM conquerboxgame.MyLogger appendLog
+INFO: Unkown packet type => 1009
+May 21, 2012 10:27:21 AM conquerboxgame.MyLogger appendLog
+INFO: Unkown packet type => 1009
+May 21, 2012 10:27:31 AM conquerboxgame.MyLogger appendLog
+INFO: Unkown packet type => 1009
+May 21, 2012 10:27:41 AM conquerboxgame.MyLogger appendLog
+INFO: Unkown packet type => 1009
+May 21, 2012 10:27:51 AM conquerboxgame.MyLogger appendLog
+INFO: Unkown packet type => 1009
+May 21, 2012 10:28:01 AM conquerboxgame.MyLogger appendLog
+INFO: Unkown packet type => 1009
+May 21, 2012 10:28:11 AM conquerboxgame.MyLogger appendLog
+INFO: Unkown packet type => 1009
+May 21, 2012 10:28:21 AM conquerboxgame.MyLogger appendLog
+INFO: Unkown packet type => 1009
+May 21, 2012 10:28:31 AM conquerboxgame.MyLogger appendLog
+INFO: Unkown packet type => 1009
+May 21, 2012 10:28:41 AM conquerboxgame.MyLogger appendLog
+INFO: Unkown packet type => 1009
+May 21, 2012 10:28:51 AM conquerboxgame.MyLogger appendLog
+INFO: Unkown packet type => 1009
+May 21, 2012 10:29:01 AM conquerboxgame.MyLogger appendLog
+INFO: Unkown packet type => 1009
+May 21, 2012 10:29:11 AM conquerboxgame.MyLogger appendLog
+INFO: Unkown packet type => 1009
+May 21, 2012 10:29:21 AM conquerboxgame.MyLogger appendLog
+INFO: Unkown packet type => 1009
+May 21, 2012 10:29:31 AM conquerboxgame.MyLogger appendLog
+INFO: Unkown packet type => 1009
+May 21, 2012 10:29:41 AM conquerboxgame.MyLogger appendLog
+INFO: Unkown packet type => 1009
+May 21, 2012 10:30:56 AM conquerboxgame.MyLogger initLog
+INFO: Log for Mon May 21 10:30:56 CDT 2012
+May 21, 2012 10:30:56 AM conquerboxgame.MyLogger appendLog
+INFO: Loaded NPC'S in 37 ms
+May 21, 2012 10:30:56 AM conquerboxgame.MyLogger appendLog
+INFO: Loaded portal locations!
+May 21, 2012 10:30:58 AM conquerboxgame.MyLogger appendLog
+INFO: Loaded DMaps in 1835 ms
+May 21, 2012 10:30:58 AM conquerboxgame.MyLogger appendLog
+INFO: Game was bound to port 8080
+May 21, 2012 10:30:59 AM conquerboxgame.MyLogger appendLog
+INFO: Client has connected! => /127.0.0.1:60400
+May 21, 2012 10:31:09 AM conquerboxgame.MyLogger appendLog
+INFO: Unkown packet type => 1009
+May 21, 2012 10:35:11 AM conquerboxgame.MyLogger initLog
+INFO: Log for Mon May 21 10:35:11 CDT 2012
+May 21, 2012 10:35:11 AM conquerboxgame.MyLogger appendLog
+INFO: Loaded NPC'S in 47 ms
+May 21, 2012 10:35:11 AM conquerboxgame.MyLogger appendLog
+INFO: Loaded portal locations!
+May 21, 2012 10:35:13 AM conquerboxgame.MyLogger appendLog
+INFO: Loaded DMaps in 1795 ms
+May 21, 2012 10:35:13 AM conquerboxgame.MyLogger appendLog
+INFO: Game was bound to port 8080
+May 21, 2012 10:35:15 AM conquerboxgame.MyLogger appendLog
+INFO: Client has connected! => /127.0.0.1:60452
+May 21, 2012 10:35:26 AM conquerboxgame.MyLogger appendLog
+INFO: Unkown packet type => 1009
+May 21, 2012 10:40:04 AM conquerboxgame.MyLogger initLog
+INFO: Log for Mon May 21 10:40:04 CDT 2012
+May 21, 2012 10:40:05 AM conquerboxgame.MyLogger appendLog
+INFO: Loaded NPC'S in 36 ms
+May 21, 2012 10:40:05 AM conquerboxgame.MyLogger appendLog
+INFO: Loaded portal locations!
+May 21, 2012 10:40:07 AM conquerboxgame.MyLogger appendLog
+INFO: Loaded DMaps in 1720 ms
+May 21, 2012 10:40:07 AM conquerboxgame.MyLogger appendLog
+INFO: Game was bound to port 8080
+May 21, 2012 10:40:07 AM conquerboxgame.MyLogger appendLog
+INFO: Client has connected! => /127.0.0.1:60476
+May 21, 2012 10:40:08 AM conquerboxgame.MyLogger appendLog
+INFO: Unkown packet type => 1009
+May 21, 2012 10:40:17 AM conquerboxgame.MyLogger appendLog
+INFO: Unkown packet type => 1009
+May 21, 2012 10:40:17 AM conquerboxgame.MyLogger appendLog
+INFO: Unkown packet type => 1009
+May 21, 2012 10:40:24 AM conquerboxgame.MyLogger appendLog
+INFO: Unkown packet type => 1009
+May 21, 2012 10:40:27 AM conquerboxgame.MyLogger appendLog
+INFO: Unkown packet type => 1009
+May 21, 2012 10:47:05 AM conquerboxgame.MyLogger initLog
+INFO: Log for Mon May 21 10:47:05 CDT 2012
+May 21, 2012 10:47:05 AM conquerboxgame.MyLogger appendLog
+INFO: Loaded NPC'S in 44 ms
+May 21, 2012 10:47:05 AM conquerboxgame.MyLogger appendLog
+INFO: Loaded portal locations!
+May 21, 2012 10:47:07 AM conquerboxgame.MyLogger appendLog
+INFO: Loaded DMaps in 1858 ms
+May 21, 2012 10:47:07 AM conquerboxgame.MyLogger appendLog
+INFO: Game was bound to port 8080
+May 21, 2012 10:47:13 AM conquerboxgame.MyLogger appendLog
+INFO: Client has connected! => /127.0.0.1:60515
+May 21, 2012 10:47:15 AM conquerboxgame.MyLogger appendLog
+INFO: Unkown packet type => 1009
+May 21, 2012 10:47:23 AM conquerboxgame.MyLogger appendLog
+INFO: Unkown packet type => 1009
+May 21, 2012 10:47:33 AM conquerboxgame.MyLogger appendLog
+INFO: Unkown packet type => 1009
+May 21, 2012 10:47:33 AM conquerboxgame.MyLogger appendLog
+INFO: Unkown packet type => 1009
+May 21, 2012 10:47:36 AM conquerboxgame.MyLogger appendLog
+WARNING: No npc handler for 10002
+May 21, 2012 10:47:38 AM conquerboxgame.MyLogger appendLog
+WARNING: No npc handler for 30161
+May 21, 2012 10:47:43 AM conquerboxgame.MyLogger appendLog
+WARNING: No npc handler for 10063
+May 21, 2012 10:47:43 AM conquerboxgame.MyLogger appendLog
+INFO: Unkown packet type => 1009
+May 21, 2012 10:47:58 AM conquerboxgame.MyLogger appendLog
+WARNING: No npc handler for 10028
+May 21, 2012 10:48:03 AM conquerboxgame.MyLogger appendLog
+INFO: Unkown packet type => 1009
+May 21, 2012 10:48:13 AM conquerboxgame.MyLogger appendLog
+INFO: Unkown packet type => 1009
+May 21, 2012 10:48:23 AM conquerboxgame.MyLogger appendLog
+INFO: Unkown packet type => 1009
+May 21, 2012 10:48:33 AM conquerboxgame.MyLogger appendLog
+INFO: Unkown packet type => 1009
+May 21, 2012 10:48:43 AM conquerboxgame.MyLogger appendLog
+WARNING: No npc handler for 10027
+May 21, 2012 10:48:47 AM conquerboxgame.MyLogger appendLog
+INFO: Unkown packet type => 1009
+May 21, 2012 10:48:57 AM conquerboxgame.MyLogger appendLog
+INFO: Unkown packet type => 1009
+May 21, 2012 10:49:09 AM conquerboxgame.MyLogger appendLog
+WARNING: No npc handler for 10012
+May 21, 2012 10:49:13 AM conquerboxgame.MyLogger appendLog
+INFO: Unkown packet type => 1009
+May 21, 2012 10:49:23 AM conquerboxgame.MyLogger appendLog
+INFO: Unkown packet type => 1009
+May 21, 2012 10:49:35 AM conquerboxgame.MyLogger appendLog
+WARNING: No npc handler for 44
+May 21, 2012 10:49:38 AM conquerboxgame.MyLogger appendLog
+INFO: Unkown packet type => 1009
+May 21, 2012 10:49:48 AM conquerboxgame.MyLogger appendLog
+INFO: Unkown packet type => 1009
+May 21, 2012 10:49:57 AM conquerboxgame.MyLogger initLog
+INFO: Log for Mon May 21 10:49:57 CDT 2012
+May 21, 2012 10:49:57 AM conquerboxgame.MyLogger appendLog
+INFO: Loaded NPC'S in 91 ms
+May 21, 2012 10:49:57 AM conquerboxgame.MyLogger appendLog
+INFO: Loaded portal locations!
+May 21, 2012 10:50:00 AM conquerboxgame.MyLogger appendLog
+INFO: Loaded DMaps in 2203 ms
+May 21, 2012 10:50:00 AM conquerboxgame.MyLogger appendLog
+INFO: Game was bound to port 8080
+May 21, 2012 10:50:00 AM conquerboxgame.MyLogger appendLog
+INFO: Client has connected! => /127.0.0.1:60529
+May 21, 2012 10:50:10 AM conquerboxgame.MyLogger appendLog
+INFO: Unkown packet type => 1009
+May 21, 2012 10:50:12 AM conquerboxgame.MyLogger appendLog
+INFO: Unkown packet type => 1009
+May 21, 2012 10:50:15 AM conquerboxgame.MyLogger appendLog
+INFO: Unkown packet type => 1009
+May 21, 2012 10:50:25 AM conquerboxgame.MyLogger appendLog
+INFO: Unkown packet type => 1009
+May 21, 2012 10:50:44 AM conquerboxgame.MyLogger appendLog
+INFO: Unkown packet type => 1009
+May 21, 2012 10:51:50 AM conquerboxgame.MyLogger initLog
+INFO: Log for Mon May 21 10:51:50 CDT 2012
+May 21, 2012 10:51:50 AM conquerboxgame.MyLogger appendLog
+INFO: Loaded NPC'S in 39 ms
+May 21, 2012 10:51:50 AM conquerboxgame.MyLogger appendLog
+INFO: Loaded portal locations!
+May 21, 2012 10:51:52 AM conquerboxgame.MyLogger appendLog
+INFO: Loaded DMaps in 1735 ms
+May 21, 2012 10:51:52 AM conquerboxgame.MyLogger appendLog
+INFO: Game was bound to port 8080
+May 21, 2012 10:52:11 AM conquerboxgame.MyLogger appendLog
+INFO: Client has connected! => /127.0.0.1:60542
+May 21, 2012 10:52:22 AM conquerboxgame.MyLogger appendLog
+INFO: Unkown packet type => 1009
+May 21, 2012 10:52:32 AM conquerboxgame.MyLogger appendLog
+INFO: Unkown packet type => 1009
+May 21, 2012 10:52:42 AM conquerboxgame.MyLogger appendLog
+INFO: Unkown packet type => 1009
+May 21, 2012 10:52:52 AM conquerboxgame.MyLogger appendLog
+INFO: Unkown packet type => 1009
+May 21, 2012 10:52:58 AM conquerboxgame.MyLogger appendLog
+INFO: Unkown packet type => 1009
+May 21, 2012 10:53:01 AM conquerboxgame.MyLogger appendLog
+INFO: Unkown packet type => 1009
+May 21, 2012 10:53:02 AM conquerboxgame.MyLogger appendLog
+INFO: Unkown packet type => 1009
+May 21, 2012 10:53:12 AM conquerboxgame.MyLogger appendLog
+INFO: Unkown packet type => 1009
+May 21, 2012 10:53:13 AM conquerboxgame.MyLogger appendLog
+INFO: Unkown packet type => 1009
+May 21, 2012 10:58:03 AM conquerboxgame.MyLogger initLog
+INFO: Log for Mon May 21 10:58:03 CDT 2012
+May 21, 2012 10:58:03 AM conquerboxgame.MyLogger appendLog
+INFO: Loaded NPC'S in 39 ms
+May 21, 2012 10:58:03 AM conquerboxgame.MyLogger appendLog
+INFO: Loaded portal locations!
+May 21, 2012 10:58:05 AM conquerboxgame.MyLogger appendLog
+INFO: Loaded DMaps in 1862 ms
+May 21, 2012 10:58:05 AM conquerboxgame.MyLogger appendLog
+INFO: Game was bound to port 8080
+May 21, 2012 10:58:05 AM conquerboxgame.MyLogger appendLog
+INFO: Client has connected! => /127.0.0.1:60589
+May 21, 2012 10:59:13 AM conquerboxgame.MyLogger initLog
+INFO: Log for Mon May 21 10:59:12 CDT 2012
+May 21, 2012 10:59:13 AM conquerboxgame.MyLogger appendLog
+INFO: Loaded NPC'S in 40 ms
+May 21, 2012 10:59:13 AM conquerboxgame.MyLogger appendLog
+INFO: Loaded portal locations!
+May 21, 2012 10:59:15 AM conquerboxgame.MyLogger appendLog
+INFO: Loaded DMaps in 1888 ms
+May 21, 2012 10:59:15 AM conquerboxgame.MyLogger appendLog
+INFO: Game was bound to port 8080
+May 21, 2012 10:59:15 AM conquerboxgame.MyLogger appendLog
+INFO: Client has connected! => /127.0.0.1:60600
+May 21, 2012 10:59:26 AM conquerboxgame.MyLogger appendLog
+INFO: Unkown packet type => 1009
+May 21, 2012 10:59:48 AM conquerboxgame.MyLogger initLog
+INFO: Log for Mon May 21 10:59:48 CDT 2012
+May 21, 2012 10:59:49 AM conquerboxgame.MyLogger appendLog
+INFO: Loaded NPC'S in 33 ms
+May 21, 2012 10:59:49 AM conquerboxgame.MyLogger appendLog
+INFO: Loaded portal locations!
+May 21, 2012 10:59:50 AM conquerboxgame.MyLogger appendLog
+INFO: Loaded DMaps in 1680 ms
+May 21, 2012 10:59:50 AM conquerboxgame.MyLogger appendLog
+INFO: Game was bound to port 8080
+May 21, 2012 10:59:51 AM conquerboxgame.MyLogger appendLog
+INFO: Client has connected! => /127.0.0.1:60613
+May 21, 2012 11:15:42 AM conquerboxgame.MyLogger initLog
+INFO: Log for Mon May 21 11:15:42 CDT 2012
+May 21, 2012 11:15:42 AM conquerboxgame.MyLogger appendLog
+INFO: Loaded NPC'S in 46 ms
+May 21, 2012 11:15:42 AM conquerboxgame.MyLogger appendLog
+INFO: Loaded portal locations!
+May 21, 2012 11:15:44 AM conquerboxgame.MyLogger appendLog
+INFO: Loaded DMaps in 1902 ms
+May 21, 2012 11:15:44 AM conquerboxgame.MyLogger appendLog
+INFO: Game was bound to port 8080
+May 21, 2012 11:18:06 AM conquerboxgame.MyLogger initLog
+INFO: Log for Mon May 21 11:18:06 CDT 2012
+May 21, 2012 11:18:06 AM conquerboxgame.MyLogger appendLog
+INFO: Loaded NPC'S in 50 ms
+May 21, 2012 11:25:46 AM conquerboxgame.MyLogger initLog
+INFO: Log for Mon May 21 11:25:46 CDT 2012
+May 21, 2012 11:25:47 AM conquerboxgame.MyLogger appendLog
+INFO: Loaded NPC'S in 38 ms
+May 21, 2012 11:32:15 AM conquerboxgame.MyLogger initLog
+INFO: Log for Mon May 21 11:32:15 CDT 2012
+May 21, 2012 11:32:15 AM conquerboxgame.MyLogger appendLog
+INFO: Loaded NPC'S in 39 ms
+May 21, 2012 11:32:16 AM conquerboxgame.MyLogger appendLog
+INFO: Load 10538 items in 293 ms
+May 21, 2012 11:32:16 AM conquerboxgame.MyLogger appendLog
+INFO: Loaded portal locations!
+May 21, 2012 11:32:17 AM conquerboxgame.MyLogger appendLog
+INFO: Loaded DMaps in 1677 ms
+May 21, 2012 11:32:17 AM conquerboxgame.MyLogger appendLog
+INFO: Game was bound to port 8080
+May 21, 2012 11:35:17 AM conquerboxgame.MyLogger initLog
+INFO: Log for Mon May 21 11:35:16 CDT 2012
+May 21, 2012 11:35:17 AM conquerboxgame.MyLogger appendLog
+INFO: Loaded NPC'S in 61 ms
+May 21, 2012 11:35:18 AM conquerboxgame.MyLogger appendLog
+INFO: Load 10538 items in 417 ms
+May 21, 2012 11:36:43 AM conquerboxgame.MyLogger initLog
+INFO: Log for Mon May 21 11:36:43 CDT 2012
+May 21, 2012 11:36:44 AM conquerboxgame.MyLogger appendLog
+INFO: Loaded NPC'S in 77 ms
+May 21, 2012 11:36:44 AM conquerboxgame.MyLogger appendLog
+INFO: Load 10538 items in 327 ms
+May 21, 2012 11:36:44 AM conquerboxgame.MyLogger appendLog
+INFO: Loaded portal locations!
+May 21, 2012 11:36:46 AM conquerboxgame.MyLogger appendLog
+INFO: Loaded DMaps in 1856 ms
+May 21, 2012 11:36:46 AM conquerboxgame.MyLogger appendLog
+INFO: Game was bound to port 8080
+May 21, 2012 11:36:48 AM conquerboxgame.MyLogger appendLog
+INFO: Client has connected! => /127.0.0.1:60792
+May 21, 2012 11:40:25 AM conquerboxgame.MyLogger initLog
+INFO: Log for Mon May 21 11:40:25 CDT 2012
+May 21, 2012 11:40:25 AM conquerboxgame.MyLogger appendLog
+INFO: Loaded NPC'S in 37 ms
+May 21, 2012 11:40:26 AM conquerboxgame.MyLogger appendLog
+INFO: Load 10538 items in 370 ms
+May 21, 2012 11:40:26 AM conquerboxgame.MyLogger appendLog
+INFO: Loaded portal locations!
+May 21, 2012 11:40:28 AM conquerboxgame.MyLogger appendLog
+INFO: Loaded DMaps in 2105 ms
+May 21, 2012 11:40:28 AM conquerboxgame.MyLogger appendLog
+INFO: Game was bound to port 8080
+May 21, 2012 11:40:30 AM conquerboxgame.MyLogger appendLog
+INFO: Client has connected! => /127.0.0.1:60817
+May 21, 2012 11:44:36 AM conquerboxgame.MyLogger initLog
+INFO: Log for Mon May 21 11:44:36 CDT 2012
+May 21, 2012 11:44:37 AM conquerboxgame.MyLogger appendLog
+INFO: Loaded NPC'S in 42 ms
+May 21, 2012 11:44:37 AM conquerboxgame.MyLogger appendLog
+INFO: Load 10538 items in 297 ms
+May 21, 2012 11:44:37 AM conquerboxgame.MyLogger appendLog
+INFO: Loaded portal locations!
+May 21, 2012 11:44:39 AM conquerboxgame.MyLogger appendLog
+INFO: Loaded DMaps in 2549 ms
+May 21, 2012 11:44:40 AM conquerboxgame.MyLogger appendLog
+INFO: Game was bound to port 8080
+May 21, 2012 11:44:40 AM conquerboxgame.MyLogger appendLog
+INFO: Client has connected! => /127.0.0.1:60863
+May 21, 2012 11:50:36 AM conquerboxgame.MyLogger initLog
+INFO: Log for Mon May 21 11:50:36 CDT 2012
+May 21, 2012 11:50:37 AM conquerboxgame.MyLogger appendLog
+INFO: Loaded NPC'S in 36 ms
+May 21, 2012 11:50:37 AM conquerboxgame.MyLogger appendLog
+INFO: Load 10538 items in 326 ms
+May 21, 2012 11:50:37 AM conquerboxgame.MyLogger appendLog
+INFO: Loaded portal locations!
+May 21, 2012 11:50:39 AM conquerboxgame.MyLogger appendLog
+INFO: Loaded DMaps in 1913 ms
+May 21, 2012 11:50:39 AM conquerboxgame.MyLogger appendLog
+INFO: Game was bound to port 8080
+May 21, 2012 11:50:40 AM conquerboxgame.MyLogger appendLog
+INFO: Client has connected! => /127.0.0.1:60893
+May 21, 2012 11:50:42 AM conquerboxgame.MyLogger appendLog
+INFO: Unkown packet subtype => 124
+May 21, 2012 11:51:51 AM conquerboxgame.MyLogger initLog
+INFO: Log for Mon May 21 11:51:51 CDT 2012
+May 21, 2012 11:51:52 AM conquerboxgame.MyLogger appendLog
+INFO: Loaded NPC'S in 46 ms
+May 21, 2012 11:51:52 AM conquerboxgame.MyLogger appendLog
+INFO: Load 10538 items in 313 ms
+May 21, 2012 11:51:52 AM conquerboxgame.MyLogger appendLog
+INFO: Loaded portal locations!
+May 21, 2012 11:51:54 AM conquerboxgame.MyLogger appendLog
+INFO: Loaded DMaps in 1967 ms
+May 21, 2012 11:51:54 AM conquerboxgame.MyLogger appendLog
+INFO: Game was bound to port 8080
+May 21, 2012 11:51:55 AM conquerboxgame.MyLogger appendLog
+INFO: Client has connected! => /127.0.0.1:60903

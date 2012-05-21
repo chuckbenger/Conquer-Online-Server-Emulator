@@ -84,20 +84,9 @@ public class ChatHandler
         if(message == null)
             return;
         
-        if(message.contains("dc"))
-            client.getChannel().disconnect();
-      
+        if(message.startsWith("/"))
+            CommandHandler.handleCommand(client, message);
         
-        else if(message.contains("tele pc"))
-            Client.teleport(client, Locations.TeleportLocation.NIX_SPAWN);
-        else if(message.contains("tele bi"))
-            Client.teleport(client, Locations.TeleportLocation.BIRD_SPAWN);
-        else if(message.contains("tele ape"))
-            Client.teleport(client, Locations.TeleportLocation.APE_SPAWN);
-        else if(message.contains("tele tc"))
-            Client.teleport(client, Locations.TeleportLocation.TWIN_CITY_SPAWN);
-         else if(message.contains("tele des"))
-            Client.teleport(client, Locations.TeleportLocation.DESERT_SPAWN);
         
         switch((int)chatType)
         {

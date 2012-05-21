@@ -47,6 +47,9 @@ public class GeneralHandler
         int  x;
         int  y;
 
+        if(id != client.getCharacterId())
+            return;
+        
         buffer.readerIndex(24);
 
         int subtype = buffer.readInt();
@@ -62,27 +65,28 @@ public class GeneralHandler
                 break;
 
             case GeneralTypes.AVATAR :
-                if (id == client.getCharacterId())
-                {
                     buffer.readerIndex(20);
                     client.setX(buffer.readUnsignedShort());
                     client.setY(buffer.readUnsignedShort());
                     client.send(GeneralUpdate.build(client.getCharacterId(), client.getX(), client.getY(), 0, 0,0, 0, GeneralTypes.AVATAR));
                     Client.spawnNpcs(client);
-                }
                 break;
 
             case GeneralTypes.PORTAL:
                 conquerboxgame.ConquerBoxGame.dump(buffer.array());
                 TeleportLocation location = CoMath.getPortal(client, Kernel.PORTALS.get(client.getMap()));
                 
+                //If map was found teleport them there. Otherwise back to tc
                 if(location != null)
                     Client.teleport(client, location);
+                else
+                    Client.teleport(client, TeleportLocation.TWIN_CITY_SPAWN);
                 break;
                 
             case GeneralTypes.RETRIEVE_SURROUNDINGS:
                 Client.spawnNpcs(client);
                 break;
+                
             default :
                 MyLogger.appendLog(Level.INFO, "Unkown packet subtype => " + subtype);
                 break;

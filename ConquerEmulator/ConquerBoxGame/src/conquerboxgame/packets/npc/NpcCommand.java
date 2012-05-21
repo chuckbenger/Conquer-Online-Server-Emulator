@@ -17,12 +17,15 @@
  */
 package conquerboxgame.packets.npc;
 
+import conquerboxgame.MyLogger;
 import conquerboxgame.core.Client;
+import conquerboxgame.packets.GeneralUpdate;
 import conquerboxgame.packets.PacketWriter;
-import conquerboxgame.structures.Locations;
+import conquerboxgame.structures.GeneralTypes;
 import conquerboxgame.structures.PacketTypes;
 import org.jboss.netty.buffer.ChannelBuffer;
 import conquerboxgame.structures.Locations.TeleportLocation;
+import java.util.logging.Level;
 
 /**
  *
@@ -112,14 +115,28 @@ public class NpcCommand
            
             //TC wharehouse
             case 8:
-             if(linkBack == 0)
-             {
-                 say("FUCK YOU",client);
-                 link("NO", linkBack, client);
-                 face(15, client);
-                 finish(client);
-             }
+             client.send(GeneralUpdate.build(client.getCharacterId(), 0, 0, 0, 0, 4, 0, GeneralTypes.WHARE_HOUSE));
              break;
+            
+            //Ape wharehouse
+            case 10028:
+                client.send(GeneralUpdate.build(client.getCharacterId(), 0, 0, 0, 0, 4, 0, GeneralTypes.WHARE_HOUSE));
+                break;
+                
+             //BI wharehouse
+            case 10027:
+                client.send(GeneralUpdate.build(client.getCharacterId(), 0, 0, 0, 0, 4, 0, GeneralTypes.WHARE_HOUSE));
+                break; 
+           
+            //PC wharehouse
+            case 10012:
+                client.send(GeneralUpdate.build(client.getCharacterId(), 0, 0, 0, 0, 4, 0, GeneralTypes.WHARE_HOUSE));
+                break; 
+                
+           //Market wharehouse
+            case 44:
+                client.send(GeneralUpdate.build(client.getCharacterId(), 0, 0, 0, 0, 4, 0, GeneralTypes.WHARE_HOUSE));
+                break;  
                 
             //TC conductress
             case 10050:
@@ -168,7 +185,7 @@ public class NpcCommand
                 break;
                 
             default:
-              System.out.println("No npc handler for " + id);
+              MyLogger.appendLog(Level.WARNING, "No npc handler for " + id);
               break;
         }
     }
@@ -215,6 +232,12 @@ public class NpcCommand
     }
     
     
+    /**
+     * Handles conductress npc's
+     * @param id the npc id
+     * @param client the client
+     * @param linkBack the link back id sent from the client
+     */
     private static void handleConductress(long id, Client client, byte linkBack)
     {
        
@@ -266,6 +289,7 @@ public class NpcCommand
                 //Market conductress
                 else if(id == 45)
                 {
+                    //Yes selected
                     if(linkBack == 1)
                     {
                         TeleportLocation location = null;

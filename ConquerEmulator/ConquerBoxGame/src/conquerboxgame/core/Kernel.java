@@ -21,6 +21,7 @@ import conquerboxgame.MyLogger;
 import conquerboxgame.database.Database;
 import conquerboxgame.net.handlers.PacketHandler;
 import conquerboxgame.net.ServerDataEvent;
+import conquerboxgame.structures.Item;
 import conquerboxgame.structures.Locations;
 import conquerboxgame.structures.NPC;
 import java.util.ArrayList;
@@ -35,6 +36,8 @@ import conquerboxgame.structures.Locations.PortalLocation;
  */
 public class Kernel 
 {
+    public static final String NAME = "[ConquerBOX] ";
+    
     public static final int PORT = 8080;
     
     //Constant primitives
@@ -52,6 +55,9 @@ public class Kernel
     
     //Non constant primitives
     private static byte currentWorker = 0; //Current thread to offload to
+    
+    //All game items
+    public static final HashMap<Integer, Item> ITEMS = new HashMap<>();
     
     public static void init()
     {
@@ -75,6 +81,13 @@ public class Kernel
         if(!DATABASE.loadNPCData(NPC_MAP))
         {
             MyLogger.appendLog(Level.SEVERE, "Failed to load npc data. shutting down");
+            killAllWorkers();
+            System.exit(-1);
+        }
+        
+        if(!Item.load(ITEMS, "res/Items.txt"))
+        {
+            MyLogger.appendLog(Level.SEVERE, "Failed to load item dat. Shutting down");
             killAllWorkers();
             System.exit(-1);
         }

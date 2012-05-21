@@ -13,9 +13,13 @@
         </data>
         <spellchecker-wordlist xmlns="http://www.netbeans.org/ns/spellchecker-wordlist/1">
             <word>bool</word>
+            <word>enum</word>
+            <word>enums</word>
             <word>imediatly</word>
             <word>npc</word>
             <word>npc's</word>
+            <word>teleport</word>
+            <word>teleports</word>
             <word>uid</word>
             <word>uint</word>
             <word>ushort</word>

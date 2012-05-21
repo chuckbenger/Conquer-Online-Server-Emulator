@@ -69,7 +69,9 @@ public class ConquerBoxGame
         {
             boolean testDMap = false;    // Whether you wan't a test dmap frame to show up
 
+            MyLogger.initLog();
             Kernel.init();
+            
             
             // Loads the dmaps into system memory
             DMapLoader.load("res/GameMaps.xml/");

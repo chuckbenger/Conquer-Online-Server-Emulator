@@ -26,6 +26,7 @@ import conquerboxgame.structures.GeneralTypes;
 import conquerboxgame.structures.PacketTypes;
 import org.jboss.netty.buffer.ChannelBuffer;
 
+
 /**
  *  This packet is sent to the World Server and to the client to manage
  *   general actions such as walking, jumping, changing directions, and
